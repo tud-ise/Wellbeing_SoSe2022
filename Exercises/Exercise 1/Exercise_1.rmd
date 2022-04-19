@@ -45,16 +45,16 @@ In the upper right corner, besides the History, which lists all the commands you
 
 ### Arithmetic Operators
 
-| Command    | Meaning                                   | Example (if appropriate) |
-|------------------|---------------------------------|----------------------|
-| \+         | Addition                                  |                          |
-| \-         | Subtraction                               |                          |
-| \*         | Multiplication                            |                          |
-| /          | Division                                  |                          |
-| \^ or \*\* | Exponentiation                            |                          |
-| x %\*% y   | Matrix Multiplication                     | c(1,4) %\*% c(3,5) == 23 |
-| %/%        | Whole Number Division                     | 6 %/% 4 == 1             |
-| %%         | Modulo (Remainder of a Division; x mod y) | 6 %% 4 == 2              |
+| Command   | Meaning                                   | Example (if appropriate) |
+|------------------|--------------------------------|----------------------|
+| \+        | Addition                                  |                          |
+| \-        | Subtraction                               |                          |
+| \*        | Multiplication                            |                          |
+| /         | Division                                  |                          |
+| ^ or \*\* | Exponentiation                            |                          |
+| x %\*% y  | Matrix Multiplication                     | c(1,4) %\*% c(3,5) == 23 |
+| %/%       | Whole Number Division                     | 6 %/% 4 == 1             |
+| %%        | Modulo (Remainder of a Division; x mod y) | 6 %% 4 == 2              |
 
 ### Logic Operators
 
@@ -76,13 +76,11 @@ The following graphic shows the use of the logical operators by means of Venn di
 
 ![Illustration of the Logical Operators](./MD_IMG/transform-logical.png)
 
-### Exercise Block
-
 ## R Functions
 
 In the following we will look at some of the standard R functions that can be used and that make up the language in the first place. Each function can be called in the documentation (even if it was inserted via a library - more to that later). Just call the command `help(fct-name)` (just type it into the console). There you get a first overview about the function and its parameters.
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 help(seq)
 ```
 
@@ -98,12 +96,14 @@ help(seq)
 | log(x)               | Natural Logarithm    |                                  |
 | log2(x)              | Logarithm to base 2  |                                  |
 | log10(x)             | Logarithm to base 10 |                                  |
-| exp(x)               | Exponential Function | e\^x                             |
+| exp(x)               | Exponential Function | e^x                              |
 
 ### Statistical Functions
 
+These functions all have the argument `na.rm`, which by default takes the value `FALSE`. This allows missing values to be taken into account, i.e. missing values (na = not available) are not removed in this case (rm = remove). These functions can all be applied to a vector (see below).
+
 | Command                | Meaning                                           |
-|------------------------|------------------------------------------------|
+|------------------------|-----------------------------------------------|
 | mean(x, na.rm = FALSE) | Mean Value                                        |
 | sd(x)                  | Standard Deviation                                |
 | var(x)                 | Variance                                          |
@@ -113,3 +113,93 @@ help(seq)
 | min(x)                 | Minimum Value (x_min)                             |
 | max(x)                 | Maximum Value (x_max)                             |
 | range(x)               | x_min and x_max                                   |
+
+### Further Useful Functions
+
+**Generation of a Vector**
+
+`c(2,5,7,2,6)`
+
+Vectors can be called as you like: `vector = c(2,5,7,2,6)`
+
+Generation of a Sequence: `seq(from, to, by)`
+
+```{r}
+seq(1, 5, 0.5)
+```
+
+**Colon Operator**
+
+`:` generates a regular sequence (i.e., sequence in steps of one)
+
+```{r}
+1:6
+```
+
+**Repetition of X**
+
+`rep(x, times, each)`
+
+-   times = the sequence is repeated n times
+
+-   each = each element is repeated n times
+
+```{r}
+rep(1:6, times=2)
+```
+
+```{r}
+rep(1:6, each=2)
+```
+
+**Display of the n first elements of x**
+
+`head(x, n = 6)`
+
+```{r include=FALSE}
+x = c(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144)
+```
+
+```{r}
+head(x, n = 6)
+```
+
+**Display of the n last elements of x**
+
+`tail(x, n = 6)`
+
+```{r}
+tail(x, n = 6)
+```
+
+#### Examples
+
+``` R
+c(1, 2, 3, 4, 5, 6)
+
+mean(c(1, 2, 3, 4, 5, 6))
+
+mean(c(1, NA, 3, 4, 5, 6), na.rm = TRUE)
+
+mean(c(1, NA, 3, 4, 5, 6), na.rm = FALSE)
+
+sd(c(1, 2, 3, 4, 5, 6))
+
+sum(c(1, 2, 3, 4, 5, 6))
+
+min(c(1, 2, 3, 4, 5, 6))
+
+range(c(1, 2, 3, 4, 5, 6))
+
+seq(from = 1, to = 6, by = 1)
+
+1:6
+
+rep(1:6, times = 2)
+
+rep(1:6, each = 2)
+
+rep(1:6, times = 2, each = 2)
+```
+
+## R Variables

@@ -99,8 +99,6 @@ Science](https://r4ds.had.co.nz/)
 
 ![Illustration of the Logical Operators](./MD_IMG/transform-logical.png)
 
-### Exercise Block
-
 ## R Functions
 
 In the following we will look at some of the standard R functions that
@@ -113,8 +111,6 @@ the function and its parameters.
 ``` r
 help(seq)
 ```
-
-    ## starting httpd help server ... done
 
 ### Numerical Functions
 
@@ -132,6 +128,12 @@ help(seq)
 
 ### Statistical Functions
 
+These functions all have the argument `na.rm`, which by default takes
+the value `FALSE`. This allows missing values to be taken into account,
+i.e. missing values (na = not available) are not removed in this case
+(rm = remove). These functions can all be applied to a vector (see
+below).
+
 | Command                | Meaning                                           |
 |------------------------|---------------------------------------------------|
 | mean(x, na.rm = FALSE) | Mean Value                                        |
@@ -143,3 +145,99 @@ help(seq)
 | min(x)                 | Minimum Value (x_min)                             |
 | max(x)                 | Maximum Value (x_max)                             |
 | range(x)               | x_min and x_max                                   |
+
+### Further Useful Functions
+
+**Generation of a Vector**
+
+`c(2,5,7,2,6)`
+
+Vectors can be called as you like: `vector = c(2,5,7,2,6)`
+
+Generation of a Sequence: `seq(from, to, by)`
+
+``` r
+seq(1, 5, 0.5)
+```
+
+    ## [1] 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0
+
+**Colon Operator**
+
+`:` generates a regular sequence (i.e., sequence in steps of one)
+
+``` r
+1:6
+```
+
+    ## [1] 1 2 3 4 5 6
+
+**Repetition of X**
+
+`rep(x, times, each)`
+
+-   times = the sequence is repeated n times
+
+-   each = each element is repeated n times
+
+``` r
+rep(1:6, times=2)
+```
+
+    ##  [1] 1 2 3 4 5 6 1 2 3 4 5 6
+
+``` r
+rep(1:6, each=2)
+```
+
+    ##  [1] 1 1 2 2 3 3 4 4 5 5 6 6
+
+**Display of the n first elements of x**
+
+`head(x, n = 6)`
+
+``` r
+head(x, n = 6)
+```
+
+    ## [1] 1 1 2 3 5 8
+
+**Display of the n last elements of x**
+
+`tail(x, n = 6)`
+
+``` r
+tail(x, n = 6)
+```
+
+    ## [1]  13  21  34  55  89 144
+
+#### Examples
+
+``` r
+c(1, 2, 3, 4, 5, 6)
+
+mean(c(1, 2, 3, 4, 5, 6))
+
+mean(c(1, NA, 3, 4, 5, 6), na.rm = TRUE)
+
+mean(c(1, NA, 3, 4, 5, 6), na.rm = FALSE)
+
+sd(c(1, 2, 3, 4, 5, 6))
+
+sum(c(1, 2, 3, 4, 5, 6))
+
+min(c(1, 2, 3, 4, 5, 6))
+
+range(c(1, 2, 3, 4, 5, 6))
+
+seq(from = 1, to = 6, by = 1)
+
+1:6
+
+rep(1:6, times = 2)
+
+rep(1:6, each = 2)
+
+rep(1:6, times = 2, each = 2)
+```
