@@ -1,7 +1,3 @@
-Untitled
-================
-Jan-Hendrik Schmidt
-2022-04-19
 
 # Exercise Number 1: Introduction to R
 
