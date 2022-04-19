@@ -1,3 +1,6 @@
+---
+output: html_document
+---
 # Exercise Number 1: Introduction to R
 
 ## Christopher Diebel & Jan-Hendrik Schmidt - ISE Darmstadt
