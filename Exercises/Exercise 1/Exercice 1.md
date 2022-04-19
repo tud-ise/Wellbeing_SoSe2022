@@ -48,7 +48,7 @@ Please work through the [Prerequisites section](https://github.com/tud-ise/Wellb
 | xor(x, y)| Exklusive OR                    | Either in x or y, not both |
 | isTRUE(x)| Tests if x is true              |                            |
 
-![Illustration of the Logical Operators](/MD_Images/transform-logical.png)
+![Illustration of the Logical Operators](./MD_Images/transform-logical.png)
 
 ## RStudio Introduction
 ### Graphical User Interface
