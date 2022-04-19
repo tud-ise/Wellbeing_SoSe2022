@@ -21,26 +21,35 @@ Please work through the [Prerequisites section](https://github.com/tud-ise/Wellb
 
 #### Arithmetic Operators
 
-| Command | Meaning                         |
-|---------|---------------------------------|
-| +       | Addition                        |
-| -       | Subtration                      |
-| *       | Multiplication                  |
-| /       | Division                        |
-| ^ or ** | Exponentiation                  |
-| %/%     | Whole Number Division           |
-| %%      | Modulo (Remainder of a Division)|
+| Command | Meaning                                   | Example                 |
+|---------|-------------------------------------------|-------------------------|
+| +       | Addition                                  |                         |
+| -       | Subtration                                |                         |
+| *       | Multiplication                            |                         |
+| /       | Division                                  |                         |
+| ^ or ** | Exponentiation                            |                         |
+| x %*% y | Matrix Multiplication                     | c(1,4) %*% c(3,5) == 23 |
+| %/%     | Whole Number Division                     | 6 %/% 4 == 1            |
+| %%      | Modulo (Remainder of a Division; x mod y) | 6 %% 4 == 2             |
 
 #### Logic Operators
 
-| Command | Meaning                         |
-|---------|---------------------------------|
-| ==      | Equal                           |
-| !=      | Unequal                         |
-| <       | Smaller than                    |
-| >       | Greater than                    |
-| <=      | Smaller equal                   |
-| >=      | Greater equal                   |
-| &       | Logical AND                     |
-| &#124;  | Logical OR                      |
-| !       | Logical NOT                     |
+| Command  | Meaning                         | Example                    |
+|----------|---------------------------------|----------------------------|
+| ==       | Equal                           |                            |
+| !=       | Unequal                         |                            |
+| <        | Smaller than                    |                            |
+| >        | Greater than                    |                            |
+| <=       | Smaller equal                   |                            |
+| >=       | Greater equal                   |                            |
+| &        | Logical AND                     | (x & y)                    |
+| &#124;   | Logical OR                      | (x &#124; y)               |
+| !        | Logical NOT                     | !x                         |
+| xor(x, y)| Exklusive OR                    | Either in x or y, not both |
+| isTRUE(x)| Tests if x is true              |                            |
+
+![Illustration of the Logical Operators](/MD_Images/transform-logical.png)
+
+## RStudio Introduction
+### Graphical User Interface
+
