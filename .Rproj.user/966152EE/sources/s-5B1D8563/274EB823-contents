@@ -1,8 +1,5 @@
 ---
-title: "Exercise 1"
-author: "Jan-Hendrik Schmidt"
-date: '2022-04-19'
-output: github_document
+
 ---
 
 ```{r setup, include=FALSE}
