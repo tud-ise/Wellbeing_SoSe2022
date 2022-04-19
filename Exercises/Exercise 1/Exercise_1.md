@@ -1,4 +1,4 @@
-Exercise 1
+Untitled
 ================
 Jan-Hendrik Schmidt
 2022-04-19
@@ -19,10 +19,7 @@ Jan-Hendrik Schmidt
     Einsteiger](http://aproxy.ulb.tu-darmstadt.de:2058/book/index.cfm?bok_id=1993358)
     or [Einführung in
     R](https://methodenlehre.github.io/einfuehrung-in-R/die-r-sprache.html)
-
-## What is R?
-
-R is a free software environment for statistical analysis.
+    (This is what this first exercise is largely based on)
 
 ## Preparation
 
@@ -30,14 +27,52 @@ Please work through the [Prerequisites
 section](https://github.com/tud-ise/Wellbeing_SoSe2022/blob/main/README.md#0-prerequisites)
 to be prepared for the first exercise.
 
+## What is R?
+
+R is a free software environment for statistical analysis.
+
+### Graphical User Interface
+
+Your opened RStudio should look something like the following:
+
+<img src="./MD_IMG/RStudio_GUI.png" width="960" height="525/"/>
+
+The RStudio GUI consists of several areas. In the console area, R code
+can be entered, which is then interpreted (executed) by R. The `>`
+character is the R prompt (prompt character). This means that you can
+work with R interactively, using it as a calculator, for example:
+
+``` r
+2+3
+```
+
+    ## [1] 5
+
+``` r
+exp(1)
+```
+
+    ## [1] 2.718282
+
+``` r
+3/4
+```
+
+    ## [1] 0.75
+
+In the upper right corner, besides the History, which lists all the
+commands you have executed so far, we find the Environment section.
+There you will find all the variables, data sets and functions that have
+been defined.
+
 ## Operators
 
 ### Arithmetic Operators
 
-| Command   | Meaning                                   | Example (if apprpriate)  |
+| Command   | Meaning                                   | Example (if appropriate) |
 |-----------|-------------------------------------------|--------------------------|
 | \+        | Addition                                  |                          |
-| \-        | Subtration                                |                          |
+| \-        | Subtraction                               |                          |
 | \*        | Multiplication                            |                          |
 | /         | Division                                  |                          |
 | ^ or \*\* | Exponentiation                            |                          |
@@ -47,7 +82,7 @@ to be prepared for the first exercise.
 
 ### Logic Operators
 
-| Command   | Meaning            | Example (if apprpriate)    |
+| Command   | Meaning            | Example (if appropriate)   |
 |-----------|--------------------|----------------------------|
 | ==        | Equal              |                            |
 | !=        | Unequal            |                            |
@@ -68,14 +103,16 @@ Science](https://r4ds.had.co.nz/)
 
 ![Illustration of the Logical Operators](./MD_IMG/transform-logical.png)
 
+### Exercise Block
+
 ## R Functions
 
 In the following we will look at some of the standard R functions that
 can be used and that make up the language in the first place. Each
 function can be called in the documentation (even if it was inserted via
-a library). Just call the command help(Fct-Name) (just type it into the
-console). There you get a first overview about the function and its
-parameters.
+a library - more to that later). Just call the command `help(fct-name)`
+(just type it into the console). There you get a first overview about
+the function and its parameters.
 
 ``` r
 help(seq)
@@ -110,39 +147,3 @@ help(seq)
 | min(x)                 | Minimum Value (x_min)                             |
 | max(x)                 | Maximum Value (x_max)                             |
 | range(x)               | x_min and x_max                                   |
-
-# RStudio Introduction
-
-## Graphical User Interface
-
-Your opened RStudio should look something like the following:
-
-<img src="./MD_IMG/RStudio_GUI.png" width="960" height="525/"/>
-
-The RStudio GUI consists of several areas. In the console area, R code
-can be entered, which is then interpreted (executed) by R. The `>`
-character is the R prompt (prompt character). This means that you can
-work with R interactively, using it as a calculator, for example:
-
-``` r
-2+3
-```
-
-    ## [1] 5
-
-``` r
-exp(1)
-```
-
-    ## [1] 2.718282
-
-``` r
-3/4
-```
-
-    ## [1] 0.75
-
-In the upper right corner, besides the History, which lists all the
-commands you have executed so far, we find the Environment section.
-There you will find all the variables, data sets and functions that have
-been defined.

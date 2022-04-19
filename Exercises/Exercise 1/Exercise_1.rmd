@@ -1,6 +1,9 @@
-------------------------------------------------------------------------
-
-------------------------------------------------------------------------
+---
+title: "Untitled"
+author: "Jan-Hendrik Schmidt"
+date: '2022-04-19'
+output: github_document
+---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -46,7 +49,7 @@ In the upper right corner, besides the History, which lists all the commands you
 ### Arithmetic Operators
 
 | Command    | Meaning                                   | Example (if appropriate) |
-|------------|-------------------------------------------|--------------------------|
+|------------------|---------------------------------|----------------------|
 | \+         | Addition                                  |                          |
 | \-         | Subtraction                               |                          |
 | \*         | Multiplication                            |                          |
@@ -89,7 +92,7 @@ help(seq)
 ### Numerical Functions
 
 | Command              | Meaning              | Example (if appropriate)         |
-|----------------------|----------------------|----------------------------------|
+|--------------------|---------------------|-------------------------------|
 | abs(x)               | Absolute Value       |                                  |
 | sqrt(x)              | Square root          |                                  |
 | ceiling(x)           | Round Up             | ceiling(4.687) is 5              |
@@ -103,7 +106,7 @@ help(seq)
 ### Statistical Functions
 
 | Command                | Meaning                                           |
-|------------------------|---------------------------------------------------|
+|------------------------|------------------------------------------------|
 | mean(x, na.rm = FALSE) | Mean Value                                        |
 | sd(x)                  | Standard Deviation                                |
 | var(x)                 | Variance                                          |
