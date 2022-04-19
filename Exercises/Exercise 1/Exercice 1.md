@@ -20,10 +20,10 @@ Please work through the [Prerequisites section](https://github.com/tud-ise/Wellb
 
 #### Arithmetic Operators
 
-'+ Addition
-'- Subtration
-'* Multiplication
-'/ Division
-'^ Exponentiation
-'%/% Division with remainder
-'%% Remainder of a Division
+`+ Addition
+`'- Subtration
+`'* Multiplication
+`'/ Division
+`'^ Exponentiation
+`'%/% Division with remainder
+`'%% Remainder of a Division
