@@ -28,6 +28,3 @@ Please work through the [Prerequisites section](https://github.com/tud-ise/Wellb
 `%/% Division with Remainder`
 `%% Remainder of a Division`
 
-5+5
-7-3
-3*100
