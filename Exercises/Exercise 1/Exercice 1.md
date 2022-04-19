@@ -13,3 +13,17 @@ R is a free software environment for statistical analysis.
 ## Preparation
 
 Please work through the [Prerequisites section](https://github.com/tud-ise/Wellbeing_SoSe2022/blob/main/README.md#0-prerequisites) to be prepared for the first exercise.
+
+## Programming Fundamentals
+
+### Operators
+
+#### Arithmetic Operators
+
++ Addition
+- Subtration
+* Multiplication
+/ Division
+^ Exponentiation
+%/% Division with remainder
+%% Remainder of a Division
