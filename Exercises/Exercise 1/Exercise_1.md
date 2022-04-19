@@ -30,11 +30,9 @@ Please work through the [Prerequisites
 section](https://github.com/tud-ise/Wellbeing_SoSe2022/blob/main/README.md#0-prerequisites)
 to be prepared for the first exercise.
 
-## Programming Fundamentals
+## Operators
 
-### Operators
-
-#### Arithmetic Operators
+### Arithmetic Operators
 
 | Command   | Meaning                                   | Example (if apprpriate)  |
 |-----------|-------------------------------------------|--------------------------|
@@ -47,7 +45,7 @@ to be prepared for the first exercise.
 | %/%       | Whole Number Division                     | 6 %/% 4 == 1             |
 | %%        | Modulo (Remainder of a Division; x mod y) | 6 %% 4 == 2              |
 
-#### Logic Operators
+### Logic Operators
 
 | Command   | Meaning            | Example (if apprpriate)    |
 |-----------|--------------------|----------------------------|
@@ -60,7 +58,7 @@ to be prepared for the first exercise.
 | &         | Logical AND        | (x & y)                    |
 | \|        | Logical OR         | (x \| y)                   |
 | !         | Logical NOT        | !x                         |
-| xor(x, y) | Exklusive OR       | Either in x or y, not both |
+| xor(x, y) | Exclusive OR       | Either in x or y, not both |
 | isTRUE(x) | Tests if x is true |                            |
 
 The following graphic shows the use of the logical operators by means of
@@ -70,9 +68,24 @@ Science](https://r4ds.had.co.nz/)
 
 ![Illustration of the Logical Operators](./MD_IMG/transform-logical.png)
 
-#### Numerical Functions
+## R Functions
 
-| Command              | Meaning              | Example (if apprpriate)          |
+In the following we will look at some of the standard R functions that
+can be used and that make up the language in the first place. Each
+function can be called in the documentation (even if it was inserted via
+a library). Just call the command help(Fct-Name) (just type it into the
+console). There you get a first overview about the function and its
+parameters.
+
+``` r
+help(seq)
+```
+
+    ## starting httpd help server ... done
+
+### Numerical Functions
+
+| Command              | Meaning              | Example (if appropriate)         |
 |----------------------|----------------------|----------------------------------|
 | abs(x)               | Absolute Value       |                                  |
 | sqrt(x)              | Square root          |                                  |
@@ -84,9 +97,23 @@ Science](https://r4ds.had.co.nz/)
 | log10(x)             | Logarithm to base 10 |                                  |
 | exp(x)               | Exponential Function | e^x                              |
 
-## RStudio Introduction
+### Statistical Functions
 
-### Graphical User Interface
+| Command                | Meaning                                           |
+|------------------------|---------------------------------------------------|
+| mean(x, na.rm = FALSE) | Mean Value                                        |
+| sd(x)                  | Standard Deviation                                |
+| var(x)                 | Variance                                          |
+| median(x)              | Median                                            |
+| quantile(x, probs)     | Quantiles of X (probs: Vector with Probabilities) |
+| sum(x)                 | Sum                                               |
+| min(x)                 | Minimum Value (x_min)                             |
+| max(x)                 | Maximum Value (x_max)                             |
+| range(x)               | x_min and x_max                                   |
+
+# RStudio Introduction
+
+## Graphical User Interface
 
 Your opened RStudio should look something like the following:
 
