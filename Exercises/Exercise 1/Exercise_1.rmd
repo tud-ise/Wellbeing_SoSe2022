@@ -41,6 +41,24 @@ exp(1)
 
 In the upper right corner, besides the History, which lists all the commands you have executed so far, we find the Environment section. There you will find all the variables, data sets and functions that have been defined.
 
+### Packages
+
+Before we start working with RStudio, we need to install some packages. Packages provide additional functions that are not included in the base R package. We first install a collection of packages for data manipulation (`tidyr`, `dplyr`, `forcats`), for importing data files (`readr`) and for graphics (`ggplot2`). These can all be installed together with this command, which we enter in the console:
+
+```{r eval=FALSE, include=TRUE}
+install.packages("tidyverse")
+```
+
+**This installation needs to run only once!**
+
+After that we can load the packages like this:
+
+```{r eval=FALSE, include=TRUE}
+library(tidyverse)
+```
+
+**You need to run this every time you open RStudio again!**
+
 ## Operators
 
 ### Arithmetic Operators
@@ -103,7 +121,7 @@ help(seq)
 These functions all have the argument `na.rm`, which by default takes the value `FALSE`. This allows missing values to be taken into account, i.e. missing values (na = not available) are not removed in this case (rm = remove). These functions can all be applied to a vector (see below).
 
 | Command                | Meaning                                           |
-|------------------------|-----------------------------------------------|
+|-------------------------|-----------------------------------------------|
 | mean(x, na.rm = FALSE) | Mean Value                                        |
 | sd(x)                  | Standard Deviation                                |
 | var(x)                 | Variance                                          |
@@ -140,9 +158,9 @@ seq(1, 5, 0.5)
 
 `rep(x, times, each)`
 
--   times = the sequence is repeated n times
+-   times: the sequence is repeated n times
 
--   each = each element is repeated n times
+-   each: each element is repeated n times
 
 ```{r}
 rep(1:6, times=2)
@@ -174,7 +192,7 @@ tail(x, n = 6)
 
 #### Examples
 
-``` R
+``` r
 c(1, 2, 3, 4, 5, 6)
 
 mean(c(1, 2, 3, 4, 5, 6))
@@ -202,4 +220,315 @@ rep(1:6, each = 2)
 rep(1:6, times = 2, each = 2)
 ```
 
+In R, functions are often nested, i.e. the output of a function is passed directly to another function as input.
+
+For example, imagine that you define a vector from which you want to calculate the mean value and round it to two decimal places:
+
+```{r}
+# Definition of a vector:
+c(34.444, 45.853, 21.912, 29.261, 31.558)
+
+# Calculation of the mean value:
+mean(c(34.444, 45.853, 21.912, 29.261, 31.558))
+
+# Round to 2 decimal places:
+round(mean(c(34.444, 45.853, 21.912, 29.261, 31.558)), digits = 2)
+```
+
+The functions are always executed in the order from inside to outside, i.e., first `mean()`, and then `round()`.
+
 ## R Variables
+
+So far, we have not saved the results of our calculations. Of course, we can define variables in R, and assign a value to them.
+
+Variables are defined in R like this: `my_var <- 4`. `<-` here is a special assignment arrow, and consists of a `<` character and a `-`. There is a key combination `ALT` + `-` in RStudio for this. So here we assign the value 4 to the new variable `my_var`.
+
+However, it is also possible to assign a variable with `=` instead of `<-` However, since `=` is also the symbol for the assignment of arguments (for functions), misunderstandings can potentially arise here. R purists therefore prefer to use `<-`.
+
+**Variable Names**
+
+A variable must have a name - this consists of `letters`, `numbers` and the characters `_` and/or `.` A variable name must start with a letter and must not contain spaces.
+
+There are a few conventions to follow to make R code readable and understandable - especially when sharing it with others. We recommend using `snake_case` for naming, i.e., we separate words within a name with an underscore: `my_var`.
+
+If we have defined a variable:
+
+```{r}
+my_var <- 9
+```
+
+we can display their value in the console:
+
+```{r}
+print(my_var)
+
+# or simply
+
+my_var
+```
+
+Variables exist in the Global Environment, but only as long as the current R session remains. If you restart R, these variables are no longer present. Therefore you should always record what you have done in an R script/notebook.
+
+## Data Types
+
+So far we have worked with vectors. These represent the fundamental data type. All further data types build on this. Vectors themselves can be divided into the following types:
+
+-   **numeric vectors**: These are what we have been dealing with so far. Numeric vectors are further divided into `integer` (whole numbers) and `double` (real numbers).
+
+-   **character vectors**: The elements of this type consist of characters surrounded by quotation marks (either `'` or `"` ), e.g. `'word'` or `"word"`.
+
+-   **logical vectors**: The elements of this type can take only 3 values: `TRUE`, `FALSE` or `NA`.
+
+Vectors must consist of the same elements, i.e., we cannot mix `logical` and `character` vectors. Vectors have 3 properties:
+
+-   Type: `typeof()`: What is it?
+
+-   Length: `length()`: How many elements?
+
+-   Attributes: `attributes()`: Additional information (metadata)
+
+Vectors are created either with the `c()` (abbreviation for combine) function, or with special functions like `seq()` or `rep()`.
+
+### **Numeric Vectors**
+
+Numeric vectors consist of numbers. These are either natural numbers (`integer`) or real numbers (`double`).
+
+```{r}
+numbers <- c(1, 2.5, 4.5)
+typeof(numbers)
+length(numbers)
+```
+
+We can select the individual elements of a vector with `[]` (this is called `subsetting` in technical jargon):
+
+```{r}
+# First Element:
+numbers[1]
+
+# Second Element:
+numbers[2]
+
+#Third Element:
+numbers[3]
+
+# Alternatively, the last element - here the third - can be identified by the length of the vector:
+numbers[length(numbers)]
+
+# With - (minus) we can omit an element, e.g., all elements except the first one:
+numbers[-1]
+
+# We can use a sequence, for example, the first two elements:
+numbers[1:2]
+
+# We can omit the first and third elements:
+numbers[-c(1, 3)]
+
+# Or let us output only the elements that are greater than a threshold:
+numbers[numbers>2]
+```
+
+#### Matrices
+
+As mentioned before, actually everything in R is a vector. A scalar is a vector of length 1. A matrix is in principle also a vector, but one with a `dim` (dimension) attribute:
+
+```{r}
+# x is a vector consisting of the numbers from 1 to 8
+x <- 1:8
+
+# We now assign a dim attribute to x, i.e. we make x a matrix (here with 2 rows and 4 columns)
+dim(x) <- c(2, 4)
+x
+
+# We can also create matrices like this:
+
+m <- matrix(1:8, nrow = 2, ncol = 4, byrow = FALSE)
+m
+
+# And we can also let us output the dimensions again:
+dim(m)
+
+
+```
+
+Note the argument `byrow`, which has the default value `FALSE`. If we set the argument `byrow = TRUE`, then we get:
+
+```{r}
+m2 <- matrix(1:8, nrow = 2, ncol = 4, byrow = TRUE)
+m2
+```
+
+We can transpose matrices, i.e., the rows become columns, and the columns become rows:
+
+```{r}
+m_transposed <- t(m)
+m_transposed
+```
+
+There are two more functions we should get to know: `cbind()` and `rbind()`. These are used to join vectors or matrices.
+
+`cbind()` combines the columns (column-bind) of vectors/matrices to one object:
+
+```{r}
+x1 <- 1:3
+x1
+
+x2 <- 10:12
+x2
+
+m1 <- cbind(x1, x2)
+m1
+```
+
+This results in a matrix `m1` with the output vectors as columns.
+
+`rbind()` combines the rows (row-bind) of vectors/matrices to one object:
+
+```{r}
+m2 <- rbind(x1, x2)
+m2
+```
+
+Matrices can also be indexed with `[]`. But we have to specify here which row(s) and column(s) we want to get, using `[rownumber, columnnumber]`.
+
+The row number and column number are separated by a comma. If `row number` or `column number` are left blank, it means: "Select all rows/columns."
+
+```{r}
+# The first cells: Row 1, Column 1
+m1[1,1]
+
+# Row 1, Column 2
+m1[1,2]
+
+# Row 2 to 3, Column 1
+m1[2:3, 1]
+
+# All Rows, Column 1
+m1[, 1]
+
+# Row 2, all Coloums
+m1[2, ]
+```
+
+#### Missing Values
+
+Missing values are declared with `NA`.
+
+```{r}
+numbers <- c(12, 13, 15, 11, NA, 10)
+numbers
+```
+
+The `is.na()` function can be used to test whether something is actually a missing value:
+
+```{r}
+is.na(numbers)
+
+numbers_without_na <- na.omit(numbers)
+numbers_without_na
+```
+
+The `na.omit()` function removes all incomplete cases of a data object.
+
+```{r}
+na.omit(numbers)
+
+#The first line of the output consists of all cases that are not NA. However, the output also consists of additional information such as the positions of the deleted values and the class. If you want to get rid of these attributes, you can simply use the as.numeric function:
+
+numbers_omit <- as.numeric(na.omit(numbers))
+numbers_omit
+```
+
+### **Character Vectors**
+
+Character vectors (strings) are used to represent text.
+
+```{r}
+text <- c("these are", "some strings")
+text
+
+typeof(text)
+
+# text consists of 2 elements
+length(text)
+```
+
+Like `numeric` vectors, `character` vectors can be indexed, i.e., we can select individual elements.
+
+There is a function with which we can merge character vectors:
+
+```{r}
+paste(text[1], text[2], sep = " ")
+
+# Special case with sep = ""
+abc <- c("a", "b", "c")
+paste0(1:3, abc)
+
+first_name <- "Luke"
+last_name <- "Skywalker"
+paste("My name is", first_name, last_name, sep = " ")
+
+number <- 9
+# Although number is an integer, it becomes a character by using paste():
+paste(number, "is an integer", sep = " ")
+```
+
+### **Logical Vectors**
+
+Logical vectors can take 3 values; either `TRUE`, `FALSE` or `NA`.
+
+```{r}
+log_var <- c(TRUE, FALSE, TRUE)
+log_var
+```
+
+Logical vectors are mainly used to index numeric vectors, e.g., to select all positive elements of a vector.
+
+```{r}
+# x is a vector of standard normally distributed random numbers (i.e., we draw here a random sample of size n = 24 from a normally distributed population with mean 0 and standard deviation 1). 
+
+set.seed(5434) # makes the example reproducible
+
+x <- rnorm(24)
+x
+
+# We now need a logical vector that indicates for each element whether this element satisfies the condition (x should be positive):
+
+x > 0
+
+# Now we index the vector x with it:
+x[x > 0]
+
+# We can also save the index
+index <- x > 0
+
+# and thus index x:
+x[index]
+
+#We can also search for all elements of x that are one standard deviation above the mean:
+
+x_mean <- mean(x)
+x_sd <- sd(x)
+x_mean
+x_sd
+
+x > (x_mean + x_sd)
+
+x[x > (x_mean + x_sd)]
+
+# or in just one command:
+
+x[x > (mean(x) + sd(x))]
+
+# this indicates which elements of x satisfy the condition
+which(x > (mean(x) + sd(x)))
+
+#In this example, the elements 1, 4, 6, 15, 24 are one standard deviation or more above the mean. We can also use this to index the vector; instead of using a logical vector, we just explicitly say which elements we want.
+
+x[which(x > (mean(x) + sd(x)))]
+
+# x[which(x > 0)] and x[x > 0] are equivalent
+
+x[which(x > (mean(x) + sd(x)))] == x[x > (mean(x) + sd(x))]
+```
+
+## Data Frames
