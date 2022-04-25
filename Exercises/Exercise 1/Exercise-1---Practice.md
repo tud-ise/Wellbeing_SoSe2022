@@ -10,11 +10,21 @@
 
 ## Practice Exercises
 
-### Operators and Functions
+### Operators and Numerical Functions
 Calculate using RStudio:
 
 1. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;\frac{1}{3}\frac{1&plus;3&plus;5&plus;7&plus;2}{3&space;&plus;&space;5&space;&plus;&space;4}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} \frac{1}{3}\frac{1+3+5+7+2}{3 + 5 + 4}}" />
-1. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;e}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} e}" /> (How can you calculate that?)
-1. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;\sqrt{2}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} \sqrt{2}}" />
-1. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;\sqrt[3]{8}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} \sqrt[3]{8}}" />
-1. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;log_2(8)}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} log_2(8)}" />
+2. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;e}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} e}" /> (How can you calculate that?)
+3. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;\sqrt{2}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} \sqrt{2}}" />
+4. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;\sqrt[3]{8}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} \sqrt[3]{8}}" />
+5. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;log_2(8)}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} log_2(8)}" />
+
+### Statistical Functions
+
+1. Create a sequence from 0 to 100 in steps of 5.
+2. Calculate the mean value of the vector [1, 3, 4, 7, 11, 2].
+3. Display the span <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;x_{max}&space;-&space;x_{min}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} x_{max} - x_{min}}" /> of this vector.
+4. Calculate the sum of this vector.
+
+
+
