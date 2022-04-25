@@ -37,4 +37,4 @@ First of all, the goal for this course is _not_ to teach you everything you will
 - The pipe: Instead of calling functions like this `f(x, y)`, you can also use a so-called pipe and put the first function parameter in front of it like this: `x %>% f(y)`. Example from above: `3.14157 %>% round(digits = 2)` is the same as `round(3.14157, digits = 2)`. Another example: `5 %>% sum(7)` is the same as `sum(5, 7)`.
 
 ## 3. Exercise!
-Let's start with the first exercise - here you find the respective [contents](./Exercises/Exercise%201/Exercise-1---Introduction.md), and here the respective [exercises](.Exercises/Exercise%201/Exercise-1---Practice.md).
+Let's start with the first exercise - here you find the respective [contents](./Exercises/Exercise%201/Exercise-1---Introduction.md), and here the respective [exercises](./Exercises/Exercise%201/Exercise-1---Practice.md). 
