@@ -28,3 +28,19 @@ Calculate using RStudio:
 
 ### Data Frames
 One advantage of packages like `tidyverse` is that sample data is often included, making it particularly clear why the packages are useful. We use the tibble `starwars` from the `tidyverse` package.
+
+1. Who is the shortest character? (Hint: You may want to use the `arrange()` function)
+
+2. Who is the tallest character? (Hint: You may want to use the `arrange()` function)
+
+3. Find all droids. (Hint: You may want to use the `filter()` function)
+
+4. How many droids are there? (Hint: You may want to use the `filter()` and `summarise()` functions)
+
+5. What is the home world of Han Solo? (Hint: You may want to use the `select()` and `filter()` functions)
+
+6. How many characters are there per species? Sort by ascending count. (Hint: You may want to use the `group_by()`, `summarise()` and `arrange()` functions)
+
+7. Change the height from `cm` to `m`. (Hint: You may want to use the `mutate()` function)
+
+8. Filter out all characters that have missing values (`NA`) for their mass. How many are left? (Hint: You may want to use the `select()` and `na.omit()` function)
