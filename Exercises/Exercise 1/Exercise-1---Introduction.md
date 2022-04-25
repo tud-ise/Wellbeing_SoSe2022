@@ -7,16 +7,15 @@
 
 -   :house_with_garden:
     [Home](https://github.com/tud-ise/Wellbeing_SoSe2022/blob/main/README.md)
--   :open_book: [Information about R](https://www.r-project.org/), [`dplyr`
-    Documentation](https://dplyr.tidyverse.org/reference/index.html)
+-   :open_book: [Information about R](https://www.r-project.org/)
+-   :open_book: [`dplyr`
+    documentation](https://dplyr.tidyverse.org/reference/index.html)
 -   :open_book: Further Reading [R for Data
     Science](https://r4ds.had.co.nz/), [R für
     Einsteiger](http://aproxy.ulb.tu-darmstadt.de:2058/book/index.cfm?bok_id=1993358)
     or [Einführung in
     R](https://methodenlehre.github.io/einfuehrung-in-R/die-r-sprache.html)
     (This is what this first exercise is largely based on)
--   :mag: [Google](https://www.google.com), [DuckDuckGo](https://www.duckduckgo.com), [Stack Overflow](https://stackoverflow.com/questions/tagged/r)
--   :bulb: [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 
 ## Preparation
 
