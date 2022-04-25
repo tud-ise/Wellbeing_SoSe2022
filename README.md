@@ -1,18 +1,14 @@
 # Increasing Well-Being With Data Analytics
 
-# Syllabus
-
-- [R for Data Science](https://r4ds.had.co.nz)
-- [Cheatsheet "Daten bändigen mit R"](./Schummelzettel%20–%20dplyr%20und%20tidyr.pdf)
-
 ## Helpful links
 
-- [https://www.rdocumentation.org](https://www.rdocumentation.org)
-- [https://www.tidyverse.org](https://www.tidyverse.org)
-- [https://www.rstudio.com/resources/cheatsheets](https://www.rstudio.com/resources/cheatsheets)
-- [https://www.r-bloggers.com](https://www.r-bloggers.com)
-- [https://stackoverflow.com/questions/tagged/r](https://stackoverflow.com/questions/tagged/r)
-- [https://towardsdatascience.com](https://towardsdatascience.com)
+- [R Documentation](https://www.rdocumentation.org)
+- [Tidyverse](https://www.tidyverse.org)
+- [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets)
+- [R-Bloggers](https://www.r-bloggers.com)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/r)
+- [Towards Data Science](https://towardsdatascience.com)
+- [R for Data Science](https://r4ds.had.co.nz)
 
 ## 0. Prerequisites
 
@@ -39,3 +35,6 @@ First of all, the goal for this course is _not_ to teach you everything you will
 - One important data structure is vectors, they look like this (for a string vector) (the `c` stands for `combine`): `c('Han Solo', 'Chewbacca')`
 - Most commonly in our course, data is stored in `data.frame`s or `tibble`s. A `tibble` (or `tbl_df`) is [a modern reimagining of the `data.frame`](https://tibble.tidyverse.org), so fundamentally the same but better.
 - The pipe: Instead of calling functions like this `f(x, y)`, you can also use a so-called pipe and put the first function parameter in front of it like this: `x %>% f(y)`. Example from above: `3.14157 %>% round(digits = 2)` is the same as `round(3.14157, digits = 2)`. Another example: `5 %>% sum(7)` is the same as `sum(5, 7)`.
+
+## 3. Exercise!
+Let's start with the first exercise - here you find the respective [contents](./Exercises/Exercise%201/Exercise-1---Introduction.md), and here the respective [exercises](.Exercises/Exercise%201/Exercise-1---Practice.md).
