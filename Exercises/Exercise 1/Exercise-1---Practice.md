@@ -16,8 +16,8 @@ Calculate using RStudio:
 
 1. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;\frac{1}{3}\frac{1&plus;3&plus;5&plus;7&plus;2}{3&space;&plus;&space;5&space;&plus;&space;4}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} \frac{1}{3}\frac{1+3+5+7+2}{3 + 5 + 4}}" />
 2. How can you calculate <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;e}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} e}" /> 
-3. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;\sqrt{2}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} \sqrt{2}}" /> <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Black}&space;\sqrt{2}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Black} \sqrt{2}}" />
-4. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;\sqrt[3]{8}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} \sqrt[3]{8}}" /> <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Black}&space;\sqrt[3]{8}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Black} \sqrt[3]{8}}" />
+3. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;\sqrt{2}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} \sqrt{2}}" /> 
+4. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;\sqrt[3]{8}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} \sqrt[3]{8}}" /> 
 5. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;log_2(8)}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} log_2(8)}" /> 
 
 ### Statistical Functions
