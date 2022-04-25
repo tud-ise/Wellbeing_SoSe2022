@@ -1,3 +1,7 @@
+# Exercise Number 1: Introduction to R - Exercises
+
+## Christopher Diebel & Jan-Hendrik Schmidt - ISE Darmstadt
+
 ## Preparation
 
 1. Install the `tidyverse` package by running `install.packages("tidyverse")`
