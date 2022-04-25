@@ -64,7 +64,7 @@ library(tidyverse)
 ### Arithmetic Operators
 
 | Command   | Meaning                                   | Example (if appropriate) |
-|-----------|-------------------------------------------|--------------------------|
+|-------------------|--------------------------------|----------------------|
 | \+        | Addition                                  |                          |
 | \-        | Subtraction                               |                          |
 | \*        | Multiplication                            |                          |
@@ -105,7 +105,7 @@ help(seq)
 ### Numerical Functions
 
 | Command              | Meaning              | Example (if appropriate)         |
-|----------------------|----------------------|----------------------------------|
+|--------------------|---------------------|-------------------------------|
 | abs(x)               | Absolute Value       |                                  |
 | sqrt(x)              | Square root          |                                  |
 | ceiling(x)           | Round Up             | ceiling(4.687) is 5              |
@@ -121,7 +121,7 @@ help(seq)
 These functions all have the argument `na.rm`, which by default takes the value `FALSE`. This allows missing values to be taken into account, i.e. missing values (na = not available) are not removed in this case (rm = remove). These functions can all be applied to a vector (see below).
 
 | Command                | Meaning                                           |
-|------------------------|---------------------------------------------------|
+|--------------------------|----------------------------------------------|
 | mean(x, na.rm = FALSE) | Mean Value                                        |
 | sd(x)                  | Standard Deviation                                |
 | var(x)                 | Variance                                          |
