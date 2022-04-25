@@ -834,4 +834,173 @@ x[which(x > (mean(x) + sd(x)))] == x[x > (mean(x) + sd(x))]
 
     ## [1] TRUE TRUE TRUE TRUE TRUE
 
+### Factors
+
+`numeric`, `logical` and `character` vectors are also called
+`atomic vectors` in R because they represent the fundamental data types.
+The `factor` object type is needed to represent categorical data or
+grouping variables. A `factor` is an integer vector that is provided
+with additional information (metadata). These `attributes` are the
+object class `factor` and the `levels`.
+
+``` r
+# Gender is a character vector
+gender <- c("male", "female", "male", "male", "female")
+gender
+```
+
+    ## [1] "male"   "female" "male"   "male"   "female"
+
+``` r
+typeof(gender)
+```
+
+    ## [1] "character"
+
+``` r
+attributes(gender)
+```
+
+    ## NULL
+
+Now we can define a factor with the function `factor()`:
+
+``` r
+gender <- factor(gender, levels = c("female", "male"))
+gender
+```
+
+    ## [1] male   female male   male   female
+    ## Levels: female male
+
+``` r
+# gender now has the data type integer
+typeof(gender)
+```
+
+    ## [1] "integer"
+
+``` r
+# but the `class` factor
+class(gender)
+```
+
+    ## [1] "factor"
+
+``` r
+# and the attributes levels and class
+attributes(gender)
+```
+
+    ## $levels
+    ## [1] "female" "male"  
+    ## 
+    ## $class
+    ## [1] "factor"
+
+### Lists
+
+Another data type is `list`. While vectors consist of elements of the
+same type, lists can be composed of heterogeneous elements.
+
+Lists are defined with the `list()` function:
+
+``` r
+x <- list(1:3, "a", c(TRUE, FALSE, TRUE), c(2.3, 5.9))
+x
+```
+
+    ## [[1]]
+    ## [1] 1 2 3
+    ## 
+    ## [[2]]
+    ## [1] "a"
+    ## 
+    ## [[3]]
+    ## [1]  TRUE FALSE  TRUE
+    ## 
+    ## [[4]]
+    ## [1] 2.3 5.9
+
+Here we have defined a list x, which contains as elements a numeric
+vector, a character, a logical vector and another numeric vector.
+
+Lists can be indexed like vectors:
+
+``` r
+x[1]
+```
+
+    ## [[1]]
+    ## [1] 1 2 3
+
+``` r
+x[2]
+```
+
+    ## [[1]]
+    ## [1] "a"
+
+``` r
+x[3]
+```
+
+    ## [[1]]
+    ## [1]  TRUE FALSE  TRUE
+
+``` r
+x[4]
+```
+
+    ## [[1]]
+    ## [1] 2.3 5.9
+
 ## Data Frames
+
+Data Frames can be considered as the most important objects in R. Data
+sets are represented in R by data frames. A data frame consists of rows
+and columns and corresponds to a data set in SPSS.
+
+Technically, a Data Frame is a list whose elements are equal-length
+vectors. The vectors themselves can be `numeric`, `logical` or
+`character` vectors, or of course factors. A Data Frame is a
+2-dimensional structure, and can be indexed like a vector on the one
+hand (more precisely: like a matrix), and like a list on the other hand.
+
+Traditionally, Data Frames are defined in R with the function
+`data.frame()`. In RStudio or the `tidyverse` package, data frames are
+recently also called `tibbles` or `tbl`. tibbles `are` defined with the
+`tibble()` function, and are just a modern variant of a data frame. They
+make working with data sets easier.
+
+A Data Frame is defined like this:
+
+``` r
+library(dplyr)
+```
+
+    ## 
+    ## Attache Paket: 'dplyr'
+
+    ## Die folgenden Objekte sind maskiert von 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## Die folgenden Objekte sind maskiert von 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+``` r
+df <- tibble(gender = factor(c("male", "female", "male", "male", "female")), age = c(22, 45, 33, 27, 30))
+
+df
+```
+
+    ## # A tibble: 5 x 2
+    ##   gender   age
+    ##   <fct>  <dbl>
+    ## 1 male      22
+    ## 2 female    45
+    ## 3 male      33
+    ## 4 male      27
+    ## 5 female    30

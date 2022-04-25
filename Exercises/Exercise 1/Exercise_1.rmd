@@ -121,7 +121,7 @@ help(seq)
 These functions all have the argument `na.rm`, which by default takes the value `FALSE`. This allows missing values to be taken into account, i.e. missing values (na = not available) are not removed in this case (rm = remove). These functions can all be applied to a vector (see below).
 
 | Command                | Meaning                                           |
-|-------------------------|-----------------------------------------------|
+|-------------------------|----------------------------------------------|
 | mean(x, na.rm = FALSE) | Mean Value                                        |
 | sd(x)                  | Standard Deviation                                |
 | var(x)                 | Variance                                          |
@@ -531,4 +531,152 @@ x[which(x > (mean(x) + sd(x)))]
 x[which(x > (mean(x) + sd(x)))] == x[x > (mean(x) + sd(x))]
 ```
 
+### Factors
+
+`numeric`, `logical` and `character` vectors are also called `atomic vectors` in R because they represent the fundamental data types. The `factor` object type is needed to represent categorical data or grouping variables. A `factor` is an integer vector that is provided with additional information (metadata). These `attributes` are the object class `factor` and the `levels`.
+
+```{r}
+# Gender is a character vector
+gender <- c("male", "female", "male", "male", "female")
+gender
+```
+
+```{r}
+typeof(gender)
+```
+
+```{r}
+attributes(gender)
+```
+
+Now we can define a factor with the function `factor()`:
+
+```{r}
+gender <- factor(gender, levels = c("female", "male"))
+gender
+```
+
+```{r}
+# gender now has the data type integer
+typeof(gender)
+```
+
+```{r}
+# but the `class` factor
+class(gender)
+```
+
+```{r}
+# and the attributes levels and class
+attributes(gender)
+```
+
+### Lists
+
+Another data type is `list`. While vectors consist of elements of the same type, lists can be composed of heterogeneous elements.
+
+Lists are defined with the `list()` function:
+
+```{r}
+x <- list(1:3, "a", c(TRUE, FALSE, TRUE), c(2.3, 5.9))
+x
+```
+
+Here we have defined a list x, which contains as elements a numeric vector, a character, a logical vector and another numeric vector.
+
+Lists can be indexed like vectors:
+
+```{r}
+x[1]
+x[2]
+x[3]
+x[4]
+```
+
 ## Data Frames
+
+Data Frames can be considered as the most important objects in R. Data sets are represented in R by data frames. A data frame consists of rows and columns and corresponds to a data set in SPSS.
+
+Technically, a Data Frame is a list whose elements are equal-length vectors. The vectors themselves can be `numeric`, `logical` or `character` vectors, or of course factors. A Data Frame is a 2-dimensional structure, and can be indexed like a vector on the one hand (more precisely: like a matrix), and like a list on the other hand.
+
+Traditionally, Data Frames are defined in R with the function `data.frame()`. In RStudio or the `tidyverse` package, data frames are recently also called `tibbles` or `tbl`. tibbles `are` defined with the `tibble()` function, and are just a modern variant of a data frame. They make working with data sets easier.
+
+A Data Frame is defined like this:
+
+```{r}
+library(dplyr)
+df <- tibble(gender = factor(c("male", "female", "male", "male", "female")), age = c(22, 45, 33, 27, 30))
+
+df
+```
+
+`df` is now a Data Frame with two variables, `gender` and `age`. In the Environment section of RStudio, data frames appear under Data.
+
+A data frame has the attributes `names()`, `colnames()` and `rownames()`, where `names()` and `colnames()` mean the same thing.
+
+```{r}
+attributes(df)
+```
+
+The length of a Data Frame is the length of the list, i.e., it corresponds to the number of columns. This can be queried with `ncol()`; `nrow()` gives the number of rows.
+
+```{r}
+ncol(df)
+nrow(df)
+```
+
+### Data Frame Subsetting
+
+As mentioned above, a data frame can be indexed like a list, or like a matrix.
+
+-   Like a list: the individual columns can be selected with `$`.
+
+-   Like a matrix: the elements can be selected with `[`.
+
+```{r}
+df$gender
+df$age
+```
+
+```{r}
+df["gender"]
+df["age"]
+```
+
+```{r}
+# Select by position
+df[1]
+df[2]
+```
+
+Similar to matrices, rows and columns can be selected, again with `[row number, column number]`.
+
+```{r}
+# First row, first column
+df[1, 1]
+
+# First row, all columns
+df[1, ]
+
+# All rows, first column
+df[, 1]
+
+# All rows, all columns
+df[ , ]
+
+# Also, we can use sequences
+# First three rows, all columns
+df[1:3, ]
+```
+
+Since the columns are vectors, we can also index them:
+
+```{r}
+df$gender[1]
+
+# or
+
+df$age[2:3]
+```
+
+  
