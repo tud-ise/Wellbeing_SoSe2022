@@ -26,5 +26,5 @@ Calculate using RStudio:
 3. Display the span <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;x_{max}&space;-&space;x_{min}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} x_{max} - x_{min}}" /> of this vector.
 4. Calculate the sum of this vector.
 
-
-
+### Data Frames
+One advantage of packages like `tidyverse` is that sample data is often included, making it particularly clear why the packages are useful. We use the tibble `starwars` from the `tidyverse` package.

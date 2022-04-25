@@ -64,7 +64,7 @@ library(tidyverse)
 ### Arithmetic Operators
 
 | Command   | Meaning                                   | Example (if appropriate) |
-|-------------------|--------------------------------|----------------------|
+|-------------------|-------------------------------|----------------------|
 | \+        | Addition                                  |                          |
 | \-        | Subtraction                               |                          |
 | \*        | Multiplication                            |                          |
@@ -605,7 +605,7 @@ A Data Frame is defined like this:
 
 ```{r}
 library(dplyr)
-df <- tibble(gender = factor(c("male", "female", "male", "male", "female")), age = c(22, 45, 33, 27, 30))
+df <- tibble(gender = factor(c("male", "female", "male", "male", "female")), age = c(22, 45, 33, 27, 30), hometown = c("Darmstadt", "Frankfurt", "Offenbach", "Frankfurt", "Darmstadt"))
 
 df
 ```
@@ -636,17 +636,20 @@ As mentioned above, a data frame can be indexed like a list, or like a matrix.
 ```{r}
 df$gender
 df$age
+df$hometown
 ```
 
 ```{r}
 df["gender"]
 df["age"]
+df["hometown"]
 ```
 
 ```{r}
 # Select by position
 df[1]
 df[2]
+df[3]
 ```
 
 Similar to matrices, rows and columns can be selected, again with `[row number, column number]`.
@@ -678,3 +681,98 @@ df$gender[1]
 
 df$age[2:3]
 ```
+
+## Pipe Operator
+
+We've already noticed that code can quickly become cluttered when we perform a sequence of operations. This leads to nested function calls.
+
+Example: We have a numerical vector of n = 10 measured values (generated here for training purposes with `rnorm()` from normally distributed random numbers) and want to center these first, then calculate the standard deviation, and finally round to two decimal places.
+
+```{r}
+set.seed(1283)
+random_sample <- rnorm(10, 24, 5)
+random_sample
+```
+
+We can perform the desired calculation of the rounded standard deviation of the centered values as nested function calls:
+
+```{r}
+round(sd(scale(random_sample,
+               center = TRUE, 
+               scale = FALSE)), 
+      digits = 2)
+```
+
+The `scale()`, `sd()` and `round()` functions are now executed in sequence (from the inside out), in such a way that the output of one function is passed as input to the next function.
+
+The `scale()` and `round()` functions have additional arguments: `center = TRUE`, `scale = FALSE`, and `digits = 2`, respectively. This is efficient, but leads to code that is difficult to read.
+
+An alternative to this would be to store the intermediate steps as variables:
+
+```{r}
+random_sample_z <- scale(random_sample, center = TRUE, scale = FALSE)
+
+sd_random_sample_z <- sd(random_sample_z)
+
+sd_random_sample_z_rounded <- round(sd_random_sample_z, digits = 2)
+
+sd_random_sample_z_rounded
+```
+
+This way, each of the substeps is on a separate line and we understand the code without any problems. However, this method requires us to define two variables that we don't actually need.
+
+But there is a very elegant method to call functions one after the other without having to write them nested: we use the `pipe` operator. This is provided by the package `dplyr` and looks like this:
+
+```{r}
+library(dplyr)
+```
+
+```{r eval=FALSE, include=TRUE}
+%>%
+```
+
+and is defined as an *Infix* operator. This means that it stands *between two* objects, similar to a mathematical operator. The name `pipe` is to be understood in the way that we "pass" or "pass on" an object to a function.
+
+This `pipe` operator is used so often that it already has its own key combination: `Cmd`+`Shift`+`M` (macOS) or `Ctrl`+`Shift`+`M` (Windows and Linux).
+
+Our example from above:
+
+```{r}
+round(sd(scale(random_sample,
+               center = TRUE,
+               scale = FALSE)),
+      digits = 2)
+```
+
+becomes with the `%>%` operator to:
+
+```{r}
+library(dplyr)
+random_sample %>%
+    scale(center = TRUE, scale = FALSE) %>%
+    sd() %>%
+    round(digits = 2)
+```
+
+This code is to be read like this:
+
+1.  We start with the object `random_sample` and pass it with `%>%` as argument to the function `scale()`
+
+2.  We apply scale(), with the additional arguments `center = TRUE`, `scale = FALSE` to it, and pass the output as an argument to the function `sd()`
+
+3.  We apply `sd()` (without further arguments) and pass the output as argument to `round()`
+
+4.  `round()`, with the further argument `digits = 2`, is executed. Since no further `pipe` follows, the output is written to the console.
+
+So it is clear: if we want to use the result further, we have to assign it to a variable:
+
+```{r}
+sd_random_sample_z_rounded <- random_sample %>% 
+  scale(center = TRUE, scale = FALSE) %>% 
+  sd() %>% 
+  round(digits = 2)
+
+sd_random_sample_z_rounded
+```
+
+So we pass an object to a function with `%>%`. If we do not specify anything else, this object is the first argument of the function.

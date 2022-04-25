@@ -991,19 +991,19 @@ library(dplyr)
     ##     intersect, setdiff, setequal, union
 
 ``` r
-df <- tibble(gender = factor(c("male", "female", "male", "male", "female")), age = c(22, 45, 33, 27, 30))
+df <- tibble(gender = factor(c("male", "female", "male", "male", "female")), age = c(22, 45, 33, 27, 30), hometown = c("Darmstadt", "Frankfurt", "Offenbach", "Frankfurt", "Darmstadt"))
 
 df
 ```
 
-    ## # A tibble: 5 x 2
-    ##   gender   age
-    ##   <fct>  <dbl>
-    ## 1 male      22
-    ## 2 female    45
-    ## 3 male      33
-    ## 4 male      27
-    ## 5 female    30
+    ## # A tibble: 5 x 3
+    ##   gender   age hometown 
+    ##   <fct>  <dbl> <chr>    
+    ## 1 male      22 Darmstadt
+    ## 2 female    45 Frankfurt
+    ## 3 male      33 Offenbach
+    ## 4 male      27 Frankfurt
+    ## 5 female    30 Darmstadt
 
 `df` is now a Data Frame with two variables, `gender` and `age`. In the
 Environment section of RStudio, data frames appear under Data.
@@ -1022,7 +1022,7 @@ attributes(df)
     ## [1] 1 2 3 4 5
     ## 
     ## $names
-    ## [1] "gender" "age"
+    ## [1] "gender"   "age"      "hometown"
 
 The length of a Data Frame is the length of the list, i.e., it
 corresponds to the number of columns. This can be queried with `ncol()`;
@@ -1032,7 +1032,7 @@ corresponds to the number of columns. This can be queried with `ncol()`;
 ncol(df)
 ```
 
-    ## [1] 2
+    ## [1] 3
 
 ``` r
 nrow(df)
@@ -1063,6 +1063,12 @@ df$age
     ## [1] 22 45 33 27 30
 
 ``` r
+df$hometown
+```
+
+    ## [1] "Darmstadt" "Frankfurt" "Offenbach" "Frankfurt" "Darmstadt"
+
+``` r
 df["gender"]
 ```
 
@@ -1087,6 +1093,19 @@ df["age"]
     ## 3    33
     ## 4    27
     ## 5    30
+
+``` r
+df["hometown"]
+```
+
+    ## # A tibble: 5 x 1
+    ##   hometown 
+    ##   <chr>    
+    ## 1 Darmstadt
+    ## 2 Frankfurt
+    ## 3 Offenbach
+    ## 4 Frankfurt
+    ## 5 Darmstadt
 
 ``` r
 # Select by position
@@ -1115,6 +1134,19 @@ df[2]
     ## 4    27
     ## 5    30
 
+``` r
+df[3]
+```
+
+    ## # A tibble: 5 x 1
+    ##   hometown 
+    ##   <chr>    
+    ## 1 Darmstadt
+    ## 2 Frankfurt
+    ## 3 Offenbach
+    ## 4 Frankfurt
+    ## 5 Darmstadt
+
 Similar to matrices, rows and columns can be selected, again with
 `[row number, column number]`.
 
@@ -1133,10 +1165,10 @@ df[1, 1]
 df[1, ]
 ```
 
-    ## # A tibble: 1 x 2
-    ##   gender   age
-    ##   <fct>  <dbl>
-    ## 1 male      22
+    ## # A tibble: 1 x 3
+    ##   gender   age hometown 
+    ##   <fct>  <dbl> <chr>    
+    ## 1 male      22 Darmstadt
 
 ``` r
 # All rows, first column
@@ -1157,14 +1189,14 @@ df[, 1]
 df[ , ]
 ```
 
-    ## # A tibble: 5 x 2
-    ##   gender   age
-    ##   <fct>  <dbl>
-    ## 1 male      22
-    ## 2 female    45
-    ## 3 male      33
-    ## 4 male      27
-    ## 5 female    30
+    ## # A tibble: 5 x 3
+    ##   gender   age hometown 
+    ##   <fct>  <dbl> <chr>    
+    ## 1 male      22 Darmstadt
+    ## 2 female    45 Frankfurt
+    ## 3 male      33 Offenbach
+    ## 4 male      27 Frankfurt
+    ## 5 female    30 Darmstadt
 
 ``` r
 # Also, we can use sequences
@@ -1172,12 +1204,12 @@ df[ , ]
 df[1:3, ]
 ```
 
-    ## # A tibble: 3 x 2
-    ##   gender   age
-    ##   <fct>  <dbl>
-    ## 1 male      22
-    ## 2 female    45
-    ## 3 male      33
+    ## # A tibble: 3 x 3
+    ##   gender   age hometown 
+    ##   <fct>  <dbl> <chr>    
+    ## 1 male      22 Darmstadt
+    ## 2 female    45 Frankfurt
+    ## 3 male      33 Offenbach
 
 Since the columns are vectors, we can also index them:
 
@@ -1195,3 +1227,138 @@ df$age[2:3]
 ```
 
     ## [1] 45 33
+
+## Pipe Operator
+
+We’ve already noticed that code can quickly become cluttered when we
+perform a sequence of operations. This leads to nested function calls.
+
+Example: We have a numerical vector of n = 10 measured values (generated
+here for training purposes with `rnorm()` from normally distributed
+random numbers) and want to center these first, then calculate the
+standard deviation, and finally round to two decimal places.
+
+``` r
+set.seed(1283)
+random_sample <- rnorm(10, 24, 5)
+random_sample
+```
+
+    ##  [1] 24.74984 21.91726 23.98551 19.63019 23.96428 22.83092 18.86240 19.08125
+    ##  [9] 23.76589 21.88846
+
+We can perform the desired calculation of the rounded standard deviation
+of the centered values as nested function calls:
+
+``` r
+round(sd(scale(random_sample,
+               center = TRUE, 
+               scale = FALSE)), 
+      digits = 2)
+```
+
+    ## [1] 2.19
+
+The `scale()`, `sd()` and `round()` functions are now executed in
+sequence (from the inside out), in such a way that the output of one
+function is passed as input to the next function.
+
+The `scale()` and `round()` functions have additional arguments:
+`center = TRUE`, `scale = FALSE`, and `digits = 2`, respectively. This
+is efficient, but leads to code that is difficult to read.
+
+An alternative to this would be to store the intermediate steps as
+variables:
+
+``` r
+random_sample_z <- scale(random_sample, center = TRUE, scale = FALSE)
+
+sd_random_sample_z <- sd(random_sample_z)
+
+sd_random_sample_z_rounded <- round(sd_random_sample_z, digits = 2)
+
+sd_random_sample_z_rounded
+```
+
+    ## [1] 2.19
+
+This way, each of the substeps is on a separate line and we understand
+the code without any problems. However, this method requires us to
+define two variables that we don’t actually need.
+
+But there is a very elegant method to call functions one after the other
+without having to write them nested: we use the `pipe` operator. This is
+provided by the package `dplyr` and looks like this:
+
+``` r
+library(dplyr)
+```
+
+``` r
+%>%
+```
+
+and is defined as an *Infix* operator. This means that it stands
+*between two* objects, similar to a mathematical operator. The name
+`pipe` is to be understood in the way that we “pass” or “pass on” an
+object to a function.
+
+This `pipe` operator is used so often that it already has its own key
+combination: `Cmd`+`Shift`+`M` (macOS) or `Ctrl`+`Shift`+`M` (Windows
+and Linux).
+
+Our example from above:
+
+``` r
+round(sd(scale(random_sample,
+               center = TRUE,
+               scale = FALSE)),
+      digits = 2)
+```
+
+    ## [1] 2.19
+
+becomes with the `%>%` operator to:
+
+``` r
+library(dplyr)
+random_sample %>%
+    scale(center = TRUE, scale = FALSE) %>%
+    sd() %>%
+    round(digits = 2)
+```
+
+    ## [1] 2.19
+
+This code is to be read like this:
+
+1.  We start with the object `random_sample` and pass it with `%>%` as
+    argument to the function `scale()`
+
+2.  We apply scale(), with the additional arguments `center = TRUE`,
+    `scale = FALSE` to it, and pass the output as an argument to the
+    function `sd()`
+
+3.  We apply `sd()` (without further arguments) and pass the output as
+    argument to `round()`
+
+4.  `round()`, with the further argument `digits = 2`, is executed.
+    Since no further `pipe` follows, the output is written to the
+    console.
+
+So it is clear: if we want to use the result further, we have to assign
+it to a variable:
+
+``` r
+sd_random_sample_z_rounded <- random_sample %>% 
+  scale(center = TRUE, scale = FALSE) %>% 
+  sd() %>% 
+  round(digits = 2)
+
+sd_random_sample_z_rounded
+```
+
+    ## [1] 2.19
+
+So we pass an object to a function with `%>%`. If we do not specify
+anything else, this object is the first argument of the function.
