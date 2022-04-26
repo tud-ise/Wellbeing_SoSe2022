@@ -29,7 +29,7 @@ First of all, the goal for this course is _not_ to teach you everything you will
 ## 2. First steps in R
 
 - Variables are usually in `snake_case`
-- Variable assignments look like this: `days_in_year <- 365`
+- Variable assignments look like this: `days_in_year <- 365` or `days_in_year = 365`
 - Function calls look like this: `f(x, y)`. Example: `round(3.14158, digits = 2)`
 - To inspect a variable type `days_in_year` and press `Enter ⏎`
 - One important data structure is vectors, they look like this (for a string vector) (the `c` stands for `combine`): `c('Han Solo', 'Chewbacca')`
