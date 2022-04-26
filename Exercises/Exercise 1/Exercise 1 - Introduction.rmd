@@ -40,7 +40,7 @@ In the upper right corner, besides the History, which lists all the commands you
 ### Arithmetic Operators
 
 | Command   | Meaning                                   | Example (if appropriate) |
-|-------------------|-------------------------------|----------------------|
+|-----------|-------------------------------------------|--------------------------|
 | \+        | Addition                                  |                          |
 | \-        | Subtraction                               |                          |
 | \*        | Multiplication                            |                          |
@@ -76,13 +76,13 @@ In the following we will look at some of the standard R functions that can be us
 ```{r eval=FALSE, include=TRUE}
 help(seq)
 
-?function
+?round
 ```
 
 ### Numerical Functions
 
 | Command              | Meaning              | Example (if appropriate)         |
-|--------------------|---------------------|-------------------------------|
+|----------------------|----------------------|----------------------------------|
 | abs(x)               | Absolute Value       |                                  |
 | sqrt(x)              | Square root          |                                  |
 | ceiling(x)           | Round Up             | ceiling(4.687) is 5              |
@@ -98,7 +98,7 @@ help(seq)
 These functions all have the argument `na.rm`, which by default takes the value `FALSE`. This allows missing values to be taken into account, i.e. missing values (na = not available) are not removed in this case (rm = remove). These functions can all be applied to a vector (see below).
 
 | Command                | Meaning                                           |
-|--------------------------|----------------------------------------------|
+|------------------------|---------------------------------------------------|
 | mean(x, na.rm = FALSE) | Mean Value                                        |
 | sd(x)                  | Standard Deviation                                |
 | var(x)                 | Variance                                          |
@@ -123,9 +123,11 @@ print(sqrt(2) + 10, digits = 4)
 
 **Generation of a Vector**
 
-`c(2,5,7,2,6)`
+```{r}
+c(2, 5, 7, 2, 6)
+```
 
-Vectors can be called as you like: `vector = c(2,5,7,2,6)`
+Vectors can be called as you like: `vector = c(2,5,7,2,6)` or `vector <- c(2,5,7,2,6)`
 
 **Character Vectors**
 
@@ -134,19 +136,25 @@ text <- c("these are", "some strings")
 text
 ```
 
-There is a function with which we can merge character vectors:
+By using the `paste()` function we can merge character vectors:
 
 ```{r}
 paste(text[1], text[2], sep = " ")
+```
 
+```{r}
 # Special case with sep = ""
 abc <- c("a", "b", "c")
 paste0(1:3, abc)
+```
 
+```{r}
 first_name <- "Luke"
 last_name <- "Skywalker"
 paste("My name is", first_name, last_name, sep = " ")
+```
 
+```{r}
 number <- 9
 # Although number is an integer, it becomes a character by using paste():
 paste(number, "is an integer", sep = " ")
@@ -184,11 +192,15 @@ rep(1:6, times=2)
 rep(1:6, each=2)
 ```
 
+```{r}
+rep(1:6, times=2, each=2)
+```
+
 **Display of the n first elements of x**
 
 `head(x, n = 6)`
 
-```{r include=FALSE}
+```{r}
 x = c(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144)
 ```
 
@@ -233,23 +245,6 @@ rep(1:6, each = 2)
 
 rep(1:6, times = 2, each = 2)
 ```
-
-In R, functions are often nested, i.e. the output of a function is passed directly to another function as input.
-
-For example, imagine that you define a vector from which you want to calculate the mean value and round it to two decimal places:
-
-```{r}
-# Definition of a vector:
-c(34.444, 45.853, 21.912, 29.261, 31.558)
-
-# Calculation of the mean value:
-mean(c(34.444, 45.853, 21.912, 29.261, 31.558))
-
-# Round to 2 decimal places:
-round(mean(c(34.444, 45.853, 21.912, 29.261, 31.558)), digits = 2)
-```
-
-The functions are always executed in the order from inside to outside, i.e., first `mean()`, and then `round()`.
 
 ## R Variables
 
@@ -311,8 +306,9 @@ We can select the individual elements of a vector with `[]` (this is called `sub
 #Numeric vectors consist of numbers. These are either natural numbers (integer) or real numbers (double).
 
 numbers <- c(1, 2.5, 4.5)
+```
 
-
+```{r}
 # First Element:
 numbers[1]
 
@@ -321,19 +317,29 @@ numbers[2]
 
 #Third Element:
 numbers[3]
+```
 
+```{r}
 # Alternatively, the last element - here the third - can be identified by the length of the vector:
 numbers[length(numbers)]
+```
 
+```{r}
 # With - (minus) we can omit an element, e.g., all elements except the first one:
 numbers[-1]
+```
 
-# We can use a sequence, for example, the first two elements:
+```{r}
+# We can use a sequence, e.g., the first two elements:
 numbers[1:2]
+```
 
+```{r}
 # We can omit the first and third elements:
 numbers[-c(1, 3)]
+```
 
+```{r}
 # Or let us output only the elements that are greater than a threshold:
 numbers[numbers>2]
 ```
@@ -371,6 +377,8 @@ m2 <- rbind(x1, x2)
 m2
 ```
 
+Matrices can also be indexed with `[]`. But we have to specify here which row(s) and column(s) we want to get, using `[rownumber, columnnumber]`.
+
 #### Missing Values
 
 Missing values are declared with `NA`.
@@ -384,17 +392,16 @@ The `is.na()` function can be used to test whether something is actually a missi
 
 ```{r}
 is.na(numbers)
-
-numbers_without_na <- na.omit(numbers)
-numbers_without_na
 ```
 
 The `na.omit()` function removes all incomplete cases of a data object.
 
 ```{r}
 na.omit(numbers)
+```
 
-#The first line of the output consists of all cases that are not NA. However, the output also consists of additional information such as the positions of the deleted values and the class. If you want to get rid of these attributes, you can simply use the as.numeric function:
+```{r}
+#The output above consists of all cases that are not NA. However, the output also consists of additional information such as the positions of the deleted values and the class. If you want to get rid of these attributes, you can simply use the as.numeric function:
 
 numbers_omit <- as.numeric(na.omit(numbers))
 numbers_omit
@@ -409,17 +416,22 @@ Technically, a Data Frame is a list whose elements are equal-length vectors. The
 Traditionally, Data Frames are defined in R with the function `data.frame()`.
 
 ```{r}
-trad_df <- data.frame(gender = c("male", "female", "male", "male", "female"), age = c(22, 45, 33, 27, 30), hometown = c("Darmstadt", "Frankfurt", "Offenbach", "Frankfurt", "Darmstadt"), stringsAsFactors = FALSE)
+trad_df <- data.frame(gender = c("male", "female", "male", "male", "female"), age = c(22, 45, 33, 27, 30), hometown = c("Darmstadt", "Frankfurt", "Offenbach", "Frankfurt", "Darmstadt"))
+trad_df
 ```
 
 You can do a lot with data frames, e.g., we will talk about the sub setting in a moment. But already on such initially created data frames we can apply some functions, among them the well-known `print()` function to output the data frame, but also the `str()` function to display the structure of the data frame or a statistical summary and nature of the data by applying `summary()` function.
 
 ```{r}
 print(trad_df)
+```
 
+```{r}
 str(trad_df)
+```
 
-print(summary(trad_df))
+```{r}
+summary(trad_df)
 ```
 
 ### Excurse: Packages
@@ -449,8 +461,7 @@ In the `tidyverse` package, data frames are recently also called `tibbles` or `t
 A Data Frame is defined like this:
 
 ```{r}
-library(dplyr)
-df <- tibble(gender = factor(c("male", "female", "male", "male", "female")), age = c(22, 45, 33, 27, 30), hometown = c("Darmstadt", "Frankfurt", "Offenbach", "Frankfurt", "Darmstadt"))
+df <- tibble(gender = c("male", "female", "male", "male", "female"), age = c(22, 45, 33, 27, 30), hometown = c("Darmstadt", "Frankfurt", "Offenbach", "Frankfurt", "Darmstadt"))
 
 df
 ```
@@ -476,7 +487,7 @@ As mentioned above, a data frame can be indexed like a list, or like a matrix.
 
 -   Like a list: the individual columns can be selected with `$`.
 
--   Like a matrix: the elements can be selected with `[`.
+-   Like a matrix: the elements can be selected with `[ ]`.
 
 ```{r}
 df$gender
@@ -508,9 +519,6 @@ df[1, ]
 
 # All rows, first column
 df[, 1]
-
-# All rows, all columns
-df[ , ]
 
 # Also, we can use sequences
 # First three rows, all columns

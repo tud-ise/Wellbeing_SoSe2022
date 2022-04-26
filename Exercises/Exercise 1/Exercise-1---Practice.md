@@ -22,7 +22,7 @@ Calculate using RStudio:
 
 ### Statistical Functions
 
-1. Create a sequence from 0 to 100 in steps of 5.
+1. Create a sequence from 0 to 100 in steps of 5 by executing 
 2. Calculate the mean value of the vector [1, 3, 4, 7, 11, 2].
 3. Display the span <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;x_{max}&space;-&space;x_{min}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} x_{max} - x_{min}}" /> of this vector.
 4. Calculate the sum of this vector.

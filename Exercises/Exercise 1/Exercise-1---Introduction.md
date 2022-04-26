@@ -35,26 +35,7 @@ Your opened RStudio should look something like the following:
 
 The RStudio GUI consists of several areas. In the console area, R code
 can be entered, which is then interpreted (executed) by R. The `>`
-character is the R prompt (prompt character). This means that you can
-work with R interactively, using it as a calculator, for example:
-
-``` r
-2+3
-```
-
-    ## [1] 5
-
-``` r
-exp(1)
-```
-
-    ## [1] 2.718282
-
-``` r
-3/4
-```
-
-    ## [1] 0.75
+character is the R prompt (prompt character).
 
 In the upper right corner, besides the History, which lists all the
 commands you have executed so far, we find the Environment section.
@@ -110,7 +91,7 @@ overview about the function and its parameters.
 ``` r
 help(seq)
 
-?function
+?round
 ```
 
 ### Numerical Functions
@@ -174,9 +155,14 @@ print(sqrt(2) + 10, digits = 4)
 
 **Generation of a Vector**
 
-`c(2,5,7,2,6)`
+``` r
+c(2, 5, 7, 2, 6)
+```
 
-Vectors can be called as you like: `vector = c(2,5,7,2,6)`
+    ## [1] 2 5 7 2 6
+
+Vectors can be called as you like: `vector = c(2,5,7,2,6)` or
+`vector <- c(2,5,7,2,6)`
 
 **Character Vectors**
 
@@ -187,7 +173,7 @@ text
 
     ## [1] "these are"    "some strings"
 
-There is a function with which we can merge character vectors:
+By using the `paste()` function we can merge character vectors:
 
 ``` r
 paste(text[1], text[2], sep = " ")
