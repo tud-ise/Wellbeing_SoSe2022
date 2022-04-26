@@ -31,13 +31,7 @@ Your opened RStudio should look something like the following:
 
 <img src="./MD_IMG/RStudio_GUI.png" width="960" height="525/"/>
 
-The RStudio GUI consists of several areas. In the console area, R code can be entered, which is then interpreted (executed) by R. The `>` character is the R prompt (prompt character). This means that you can work with R interactively, using it as a calculator, for example:
-
-```{r}
-2+3
-exp(1)
-3/4
-```
+The RStudio GUI consists of several areas. In the console area, R code can be entered, which is then interpreted (executed) by R. The `>` character is the R prompt (prompt character).
 
 In the upper right corner, besides the History, which lists all the commands you have executed so far, we find the Environment section. There you will find all the variables, data sets and functions that have been defined.
 
