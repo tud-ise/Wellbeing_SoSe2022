@@ -35,6 +35,3 @@ First of all, the goal for this course is _not_ to teach you everything you will
 - One important data structure is vectors, they look like this (for a string vector) (the `c` stands for `combine`): `c('Han Solo', 'Chewbacca')`
 - Most commonly in our course, data is stored in `data.frame`s or `tibble`s. A `tibble` (or `tbl_df`) is [a modern reimagining of the `data.frame`](https://tibble.tidyverse.org), so fundamentally the same but better.
 - The pipe: Instead of calling functions like this `f(x, y)`, you can also use a so-called pipe and put the first function parameter in front of it like this: `x %>% f(y)`. Example from above: `3.14157 %>% round(digits = 2)` is the same as `round(3.14157, digits = 2)`. Another example: `5 %>% sum(7)` is the same as `sum(5, 7)`.
-
-## 3. Exercise!
-Let's start with the first exercise - here you find the respective [contents](./Exercises/Exercise%201/Exercise-1---Introduction.md), and here the respective [exercises](./Exercises/Exercise%201/Exercise-1---Practice.md). 
