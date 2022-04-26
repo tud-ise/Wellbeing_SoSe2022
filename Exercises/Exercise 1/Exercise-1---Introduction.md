@@ -61,31 +61,6 @@ commands you have executed so far, we find the Environment section.
 There you will find all the variables, data sets and functions that have
 been defined.
 
-### Packages
-
-**NACH HINTEN PACKEN**
-
-Before we start working with RStudio, we need to install some packages.
-Packages provide additional functions that are not included in the base
-R package. We first install a collection of packages for data
-manipulation (`tidyr`, `dplyr`, `forcats`), for importing data files
-(`readr`) and for graphics (`ggplot2`). These can all be installed
-together with this command, which we enter in the console:
-
-``` r
-install.packages("tidyverse")
-```
-
-**This installation needs to run only once!**
-
-After that we can load the packages like this:
-
-``` r
-library(tidyverse)
-```
-
-**You need to run this every time you open RStudio again!**
-
 ## Operators
 
 ### Arithmetic Operators
@@ -431,7 +406,7 @@ divided into the following types:
     characters surrounded by quotation marks (either `'` or `"` ),
     e.g. `'word'` or `"word"`.
 
--   **logical vectors**: The elements of this type can take only 3
+-   **Logical Vectors**: The elements of this type can take only 3
     values: `TRUE`, `FALSE` or `NA`.
 
 Vectors must consist of the same elements, i.e., we cannot mix `logical`
@@ -631,17 +606,89 @@ and columns and corresponds to a data set in SPSS.
 
 Technically, a Data Frame is a list whose elements are equal-length
 vectors. The vectors themselves can be `numeric`, `logical` or
-`character` vectors, or of course factors. A Data Frame is a
-2-dimensional structure, and can be indexed like a vector on the one
-hand (more precisely: like a matrix), and like a list on the other hand.
+`character` vectors, or also factors. A Data Frame is a 2-dimensional
+structure, and can be indexed like a vector on the one hand (more
+precisely: like a matrix), and like a list on the other hand.
 
 Traditionally, Data Frames are defined in R with the function
 `data.frame()`.
 
-In RStudio or the `tidyverse` package, data frames are recently also
-called `tibbles` or `tbl`. tibbles `are` defined with the `tibble()`
-function, and are just a modern variant of a data frame. They make
-working with data sets easier.
+``` r
+trad_df <- data.frame(gender = c("male", "female", "male", "male", "female"), age = c(22, 45, 33, 27, 30), hometown = c("Darmstadt", "Frankfurt", "Offenbach", "Frankfurt", "Darmstadt"), stringsAsFactors = FALSE)
+```
+
+You can do a lot with data frames, e.g., we will talk about the sub
+setting in a moment. But already on such initially created data frames
+we can apply some functions, among them the well-known `print()`
+function to output the data frame, but also the `str()` function to
+display the structure of the data frame or a statistical summary and
+nature of the data by applying `summary()` function.
+
+``` r
+print(trad_df)
+```
+
+    ##   gender age  hometown
+    ## 1   male  22 Darmstadt
+    ## 2 female  45 Frankfurt
+    ## 3   male  33 Offenbach
+    ## 4   male  27 Frankfurt
+    ## 5 female  30 Darmstadt
+
+``` r
+str(trad_df)
+```
+
+    ## 'data.frame':    5 obs. of  3 variables:
+    ##  $ gender  : chr  "male" "female" "male" "male" ...
+    ##  $ age     : num  22 45 33 27 30
+    ##  $ hometown: chr  "Darmstadt" "Frankfurt" "Offenbach" "Frankfurt" ...
+
+``` r
+print(summary(trad_df))
+```
+
+    ##     gender               age         hometown        
+    ##  Length:5           Min.   :22.0   Length:5          
+    ##  Class :character   1st Qu.:27.0   Class :character  
+    ##  Mode  :character   Median :30.0   Mode  :character  
+    ##                     Mean   :31.4                     
+    ##                     3rd Qu.:33.0                     
+    ##                     Max.   :45.0
+
+### Excurse: Packages
+
+Almost every software has extensions of some kind. Some have extensions,
+some have plug-ins, some have add-ons. Different terminology for the
+same principle: more features through other people’s extensions. In R,
+such extensions are called *Packages*.
+
+Packages provide additional functions that are not included in the base
+R package. We first install a collection of packages for data
+manipulation (`tidyr`, `dplyr`, `forcats`), for importing data files
+(`readr`) and for graphics (`ggplot2`). These can all be installed
+together with this command, which we enter in the console:
+
+``` r
+install.packages("tidyverse")
+```
+
+**This installation needs to run only once!**
+
+After that we can load the packages like this:
+
+``` r
+library(tidyverse)
+```
+
+**You need to run this every time you open RStudio again!**
+
+### Back to Data Frames
+
+In the `tidyverse` package, data frames are recently also called
+`tibbles` or `tbl`. tibbles `are` defined with the `tibble()` function,
+and are just a modern variant of a data frame. They make working with
+data sets easier.
 
 A Data Frame is defined like this:
 
