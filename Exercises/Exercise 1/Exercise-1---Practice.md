@@ -30,11 +30,24 @@ Calculate using RStudio:
 ### Data Frames
 One advantage of packages like `tidyverse` is that sample data is often included, making it particularly clear why the packages are useful. We use the tibble `starwars` from the `tidyverse` package.
 
-1. Who is the shortest character? (Hint: You may want to use the `arrange()` function)
+#### Group Task
 
-2. Who is the tallest character? (Hint: You may want to use the `arrange()` function)
+0. Get to know the dataset
 
-3. Find all droids. (Hint: You may want to use the `filter()` function)
+```R
+starwars
+View(starwars)
+```
+
+1. Who is the shortest character?
+
+2. Find all characters from  Tatooine.
+
+#### Breakout Room Tasks
+
+1. Who is the tallest character? (Hint: You may want to use the `desc()` function)
+
+3. Find all droids.
 
 4. How many droids are there? (Hint: You may want to use the `filter()` and `summarise()` functions)
 
