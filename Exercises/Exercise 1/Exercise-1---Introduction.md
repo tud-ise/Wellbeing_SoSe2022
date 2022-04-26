@@ -63,6 +63,8 @@ been defined.
 
 ### Packages
 
+**NACH HINTEN PACKEN**
+
 Before we start working with RStudio, we need to install some packages.
 Packages provide additional functions that are not included in the base
 R package. We first install a collection of packages for data
@@ -101,19 +103,18 @@ library(tidyverse)
 
 ### Logic Operators
 
-| Command   | Meaning            | Example (if appropriate)   |
-|-----------|--------------------|----------------------------|
-| ==        | Equal              |                            |
-| !=        | Unequal            |                            |
-| \<        | Smaller than       |                            |
-| \>        | Greater than       |                            |
-| \<=       | Smaller equal      |                            |
-| \>=       | Greater equal      |                            |
-| &         | Logical AND        | (x & y)                    |
-| \|        | Logical OR         | (x \| y)                   |
-| !         | Logical NOT        | !x                         |
-| xor(x, y) | Exclusive OR       | Either in x or y, not both |
-| isTRUE(x) | Tests if x is true |                            |
+| Command   | Meaning       | Example (if appropriate)   |
+|-----------|---------------|----------------------------|
+| ==        | Equal         |                            |
+| !=        | Unequal       |                            |
+| \<        | Smaller than  |                            |
+| \>        | Greater than  |                            |
+| \<=       | Smaller equal |                            |
+| \>=       | Greater equal |                            |
+| &         | Logical AND   | (x & y)                    |
+| \|        | Logical OR    | (x \| y)                   |
+| !         | Logical NOT   | !x                         |
+| xor(x, y) | Exclusive OR  | Either in x or y, not both |
 
 The following graphic shows the use of the logical operators by means of
 Venn diagrams. `x` always refers to the left circle, `y` to the right.
@@ -128,11 +129,13 @@ In the following we will look at some of the standard R functions that
 can be used and that make up the language in the first place. Each
 function can be called in the documentation (even if it was inserted via
 a library - more to that later). Just call the command `help(fct-name)`
-(just type it into the console). There you get a first overview about
-the function and its parameters.
+or `?fct` (just type it into the console). There you get a first
+overview about the function and its parameters.
 
 ``` r
 help(seq)
+
+?function
 ```
 
 ### Numerical Functions
@@ -171,13 +174,79 @@ below).
 
 ### Further Useful Functions
 
+**Print Function**
+
+The `print()` function writes the output to the console or output file
+(batch mode).
+
+``` r
+print(sqrt(2))
+```
+
+    ## [1] 1.414214
+
+``` r
+print(sqrt(2), digits = 4)
+```
+
+    ## [1] 1.414
+
+``` r
+print(sqrt(2) + 10, digits = 4)
+```
+
+    ## [1] 11.41
+
 **Generation of a Vector**
 
 `c(2,5,7,2,6)`
 
 Vectors can be called as you like: `vector = c(2,5,7,2,6)`
 
-Generation of a Sequence: `seq(from, to, by)`
+**Character Vectors**
+
+``` r
+text <- c("these are", "some strings")
+text
+```
+
+    ## [1] "these are"    "some strings"
+
+There is a function with which we can merge character vectors:
+
+``` r
+paste(text[1], text[2], sep = " ")
+```
+
+    ## [1] "these are some strings"
+
+``` r
+# Special case with sep = ""
+abc <- c("a", "b", "c")
+paste0(1:3, abc)
+```
+
+    ## [1] "1a" "2b" "3c"
+
+``` r
+first_name <- "Luke"
+last_name <- "Skywalker"
+paste("My name is", first_name, last_name, sep = " ")
+```
+
+    ## [1] "My name is Luke Skywalker"
+
+``` r
+number <- 9
+# Although number is an integer, it becomes a character by using paste():
+paste(number, "is an integer", sep = " ")
+```
+
+    ## [1] "9 is an integer"
+
+**Generation of a Sequence**
+
+`seq(from, to, by)`
 
 ``` r
 seq(1, 5, 0.5)
@@ -354,11 +423,11 @@ So far we have worked with vectors. These represent the fundamental data
 type. All further data types build on this. Vectors themselves can be
 divided into the following types:
 
--   **numeric vectors**: These are what we have been dealing with so
+-   **Numeric Vectors**: These are what we have been dealing with so
     far. Numeric vectors are further divided into `integer` (whole
     numbers) and `double` (real numbers).
 
--   **character vectors**: The elements of this type consist of
+-   **Character Vectors**: The elements of this type consist of
     characters surrounded by quotation marks (either `'` or `"` ),
     e.g. `'word'` or `"word"`.
 
@@ -377,28 +446,17 @@ and `character` vectors. Vectors have 3 properties:
 Vectors are created either with the `c()` (abbreviation for combine)
 function, or with special functions like `seq()` or `rep()`.
 
-### **Numeric Vectors**
-
-Numeric vectors consist of numbers. These are either natural numbers
-(`integer`) or real numbers (`double`).
-
-``` r
-numbers <- c(1, 2.5, 4.5)
-typeof(numbers)
-```
-
-    ## [1] "double"
-
-``` r
-length(numbers)
-```
-
-    ## [1] 3
+### **Subsetting of Vectors**
 
 We can select the individual elements of a vector with `[]` (this is
 called `subsetting` in technical jargon):
 
 ``` r
+#Numeric vectors consist of numbers. These are either natural numbers (integer) or real numbers (double).
+
+numbers <- c(1, 2.5, 4.5)
+
+
 # First Element:
 numbers[1]
 ```
@@ -461,61 +519,13 @@ vector of length 1. A matrix is in principle also a vector, but one with
 a `dim` (dimension) attribute:
 
 ``` r
-# x is a vector consisting of the numbers from 1 to 8
-x <- 1:8
-
-# We now assign a dim attribute to x, i.e. we make x a matrix (here with 2 rows and 4 columns)
-dim(x) <- c(2, 4)
-x
-```
-
-    ##      [,1] [,2] [,3] [,4]
-    ## [1,]    1    3    5    7
-    ## [2,]    2    4    6    8
-
-``` r
-# We can also create matrices like this:
-
-m <- matrix(1:8, nrow = 2, ncol = 4, byrow = FALSE)
+m <- matrix(1:8, nrow = 2, ncol = 4)
 m
 ```
 
     ##      [,1] [,2] [,3] [,4]
     ## [1,]    1    3    5    7
     ## [2,]    2    4    6    8
-
-``` r
-# And we can also let us output the dimensions again:
-dim(m)
-```
-
-    ## [1] 2 4
-
-Note the argument `byrow`, which has the default value `FALSE`. If we
-set the argument `byrow = TRUE`, then we get:
-
-``` r
-m2 <- matrix(1:8, nrow = 2, ncol = 4, byrow = TRUE)
-m2
-```
-
-    ##      [,1] [,2] [,3] [,4]
-    ## [1,]    1    2    3    4
-    ## [2,]    5    6    7    8
-
-We can transpose matrices, i.e., the rows become columns, and the
-columns become rows:
-
-``` r
-m_transposed <- t(m)
-m_transposed
-```
-
-    ##      [,1] [,2]
-    ## [1,]    1    2
-    ## [2,]    3    4
-    ## [3,]    5    6
-    ## [4,]    7    8
 
 There are two more functions we should get to know: `cbind()` and
 `rbind()`. These are used to join vectors or matrices.
@@ -549,7 +559,7 @@ m1
 
 This results in a matrix `m1` with the output vectors as columns.
 
-`rbind()` combines the rows (row-bind) of vectors/matrices to one
+`rbind()` combines the rows (row-bind) of vectors/ matrices to one
 object:
 
 ``` r
@@ -560,52 +570,6 @@ m2
     ##    [,1] [,2] [,3]
     ## x1    1    2    3
     ## x2   10   11   12
-
-Matrices can also be indexed with `[]`. But we have to specify here
-which row(s) and column(s) we want to get, using
-`[rownumber, columnnumber]`.
-
-The row number and column number are separated by a comma. If
-`row number` or `column number` are left blank, it means: “Select all
-rows/columns.”
-
-``` r
-# The first cells: Row 1, Column 1
-m1[1,1]
-```
-
-    ## x1 
-    ##  1
-
-``` r
-# Row 1, Column 2
-m1[1,2]
-```
-
-    ## x2 
-    ## 10
-
-``` r
-# Row 2 to 3, Column 1
-m1[2:3, 1]
-```
-
-    ## [1] 2 3
-
-``` r
-# All Rows, Column 1
-m1[, 1]
-```
-
-    ## [1] 1 2 3
-
-``` r
-# Row 2, all Coloums
-m1[2, ]
-```
-
-    ## x1 x2 
-    ##  2 11
 
 #### Missing Values
 
@@ -659,302 +623,6 @@ numbers_omit
 
     ## [1] 12 13 15 11 10
 
-### **Character Vectors**
-
-Character vectors (strings) are used to represent text.
-
-``` r
-text <- c("these are", "some strings")
-text
-```
-
-    ## [1] "these are"    "some strings"
-
-``` r
-typeof(text)
-```
-
-    ## [1] "character"
-
-``` r
-# text consists of 2 elements
-length(text)
-```
-
-    ## [1] 2
-
-Like `numeric` vectors, `character` vectors can be indexed, i.e., we can
-select individual elements.
-
-There is a function with which we can merge character vectors:
-
-``` r
-paste(text[1], text[2], sep = " ")
-```
-
-    ## [1] "these are some strings"
-
-``` r
-# Special case with sep = ""
-abc <- c("a", "b", "c")
-paste0(1:3, abc)
-```
-
-    ## [1] "1a" "2b" "3c"
-
-``` r
-first_name <- "Luke"
-last_name <- "Skywalker"
-paste("My name is", first_name, last_name, sep = " ")
-```
-
-    ## [1] "My name is Luke Skywalker"
-
-``` r
-number <- 9
-# Although number is an integer, it becomes a character by using paste():
-paste(number, "is an integer", sep = " ")
-```
-
-    ## [1] "9 is an integer"
-
-### **Logical Vectors**
-
-Logical vectors can take 3 values; either `TRUE`, `FALSE` or `NA`.
-
-``` r
-log_var <- c(TRUE, FALSE, TRUE)
-log_var
-```
-
-    ## [1]  TRUE FALSE  TRUE
-
-Logical vectors are mainly used to index numeric vectors, e.g., to
-select all positive elements of a vector.
-
-``` r
-# x is a vector of standard normally distributed random numbers (i.e., we draw here a random sample of size n = 24 from a normally distributed population with mean 0 and standard deviation 1). 
-
-set.seed(5434) # makes the example reproducible
-
-x <- rnorm(24)
-x
-```
-
-    ##  [1]  1.06115528  0.87480990 -0.30032832  1.21965848  0.09860288  1.89862128
-    ##  [7] -1.54699798  0.96349219 -0.64968432 -1.09672125 -0.55326456 -0.29394388
-    ## [13]  0.58151046 -0.15135071  1.66997280 -0.10726874  0.51633289 -0.64741465
-    ## [19]  0.10489022 -0.95484078  0.22940461 -0.54106301 -0.76310004  1.22446844
-
-``` r
-# We now need a logical vector that indicates for each element whether this element satisfies the condition (x should be positive):
-
-x > 0
-```
-
-    ##  [1]  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE
-    ## [13]  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE  TRUE
-
-``` r
-# Now we index the vector x with it:
-x[x > 0]
-```
-
-    ##  [1] 1.06115528 0.87480990 1.21965848 0.09860288 1.89862128 0.96349219
-    ##  [7] 0.58151046 1.66997280 0.51633289 0.10489022 0.22940461 1.22446844
-
-``` r
-# We can also save the index
-index <- x > 0
-
-# and thus index x:
-x[index]
-```
-
-    ##  [1] 1.06115528 0.87480990 1.21965848 0.09860288 1.89862128 0.96349219
-    ##  [7] 0.58151046 1.66997280 0.51633289 0.10489022 0.22940461 1.22446844
-
-``` r
-#We can also search for all elements of x that are one standard deviation above the mean:
-
-x_mean <- mean(x)
-x_sd <- sd(x)
-x_mean
-```
-
-    ## [1] 0.1182059
-
-``` r
-x_sd
-```
-
-    ## [1] 0.9156615
-
-``` r
-x > (x_mean + x_sd)
-```
-
-    ##  [1]  TRUE FALSE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE
-    ## [13] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE
-
-``` r
-x[x > (x_mean + x_sd)]
-```
-
-    ## [1] 1.061155 1.219658 1.898621 1.669973 1.224468
-
-``` r
-# or in just one command:
-
-x[x > (mean(x) + sd(x))]
-```
-
-    ## [1] 1.061155 1.219658 1.898621 1.669973 1.224468
-
-``` r
-# this indicates which elements of x satisfy the condition
-which(x > (mean(x) + sd(x)))
-```
-
-    ## [1]  1  4  6 15 24
-
-``` r
-#In this example, the elements 1, 4, 6, 15, 24 are one standard deviation or more above the mean. We can also use this to index the vector; instead of using a logical vector, we just explicitly say which elements we want.
-
-x[which(x > (mean(x) + sd(x)))]
-```
-
-    ## [1] 1.061155 1.219658 1.898621 1.669973 1.224468
-
-``` r
-# x[which(x > 0)] and x[x > 0] are equivalent
-
-x[which(x > (mean(x) + sd(x)))] == x[x > (mean(x) + sd(x))]
-```
-
-    ## [1] TRUE TRUE TRUE TRUE TRUE
-
-### Factors
-
-`numeric`, `logical` and `character` vectors are also called
-`atomic vectors` in R because they represent the fundamental data types.
-The `factor` object type is needed to represent categorical data or
-grouping variables. A `factor` is an integer vector that is provided
-with additional information (metadata). These `attributes` are the
-object class `factor` and the `levels`.
-
-``` r
-# Gender is a character vector
-gender <- c("male", "female", "male", "male", "female")
-gender
-```
-
-    ## [1] "male"   "female" "male"   "male"   "female"
-
-``` r
-typeof(gender)
-```
-
-    ## [1] "character"
-
-``` r
-attributes(gender)
-```
-
-    ## NULL
-
-Now we can define a factor with the function `factor()`:
-
-``` r
-gender <- factor(gender, levels = c("female", "male"))
-gender
-```
-
-    ## [1] male   female male   male   female
-    ## Levels: female male
-
-``` r
-# gender now has the data type integer
-typeof(gender)
-```
-
-    ## [1] "integer"
-
-``` r
-# but the `class` factor
-class(gender)
-```
-
-    ## [1] "factor"
-
-``` r
-# and the attributes levels and class
-attributes(gender)
-```
-
-    ## $levels
-    ## [1] "female" "male"  
-    ## 
-    ## $class
-    ## [1] "factor"
-
-### Lists
-
-Another data type is `list`. While vectors consist of elements of the
-same type, lists can be composed of heterogeneous elements.
-
-Lists are defined with the `list()` function:
-
-``` r
-x <- list(1:3, "a", c(TRUE, FALSE, TRUE), c(2.3, 5.9))
-x
-```
-
-    ## [[1]]
-    ## [1] 1 2 3
-    ## 
-    ## [[2]]
-    ## [1] "a"
-    ## 
-    ## [[3]]
-    ## [1]  TRUE FALSE  TRUE
-    ## 
-    ## [[4]]
-    ## [1] 2.3 5.9
-
-Here we have defined a list x, which contains as elements a numeric
-vector, a character, a logical vector and another numeric vector.
-
-Lists can be indexed like vectors:
-
-``` r
-x[1]
-```
-
-    ## [[1]]
-    ## [1] 1 2 3
-
-``` r
-x[2]
-```
-
-    ## [[1]]
-    ## [1] "a"
-
-``` r
-x[3]
-```
-
-    ## [[1]]
-    ## [1]  TRUE FALSE  TRUE
-
-``` r
-x[4]
-```
-
-    ## [[1]]
-    ## [1] 2.3 5.9
-
 ## Data Frames
 
 Data Frames can be considered as the most important objects in R. Data
@@ -968,10 +636,12 @@ vectors. The vectors themselves can be `numeric`, `logical` or
 hand (more precisely: like a matrix), and like a list on the other hand.
 
 Traditionally, Data Frames are defined in R with the function
-`data.frame()`. In RStudio or the `tidyverse` package, data frames are
-recently also called `tibbles` or `tbl`. tibbles `are` defined with the
-`tibble()` function, and are just a modern variant of a data frame. They
-make working with data sets easier.
+`data.frame()`.
+
+In RStudio or the `tidyverse` package, data frames are recently also
+called `tibbles` or `tbl`. tibbles `are` defined with the `tibble()`
+function, and are just a modern variant of a data frame. They make
+working with data sets easier.
 
 A Data Frame is defined like this:
 
