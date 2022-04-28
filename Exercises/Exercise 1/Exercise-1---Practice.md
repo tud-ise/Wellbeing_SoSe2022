@@ -14,23 +14,23 @@
 ### Operators and Numerical Functions
 Calculate using RStudio:
 
-1. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;\frac{1}{3}\frac{1&plus;3&plus;5&plus;7&plus;2}{3&space;&plus;&space;5&space;&plus;&space;4}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} \frac{1}{3}\frac{1+3+5+7+2}{3 + 5 + 4}}" />
+1. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;\frac{1}{3}\frac{1&plus;3&plus;5&plus;7&plus;2}{3&space;&plus;&space;5&space;&plus;&space;4}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} \frac{1}{3}\frac{1+3+5+7+2}{3 + 5 + 4}}" />
 ```R
 (1/3)*((1+3+5+7+2)/(3+5+4))
 ```
-2. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;e}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} e}" /> (How can you calculate that?)
+2. How can you calculate <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;e}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} e}" /> 
 ```R
 exp(1)
 ```
-3. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;\sqrt{2}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} \sqrt{2}}" />
+3. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;\sqrt{2}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} \sqrt{2}}" /> 
 ```R
 sqrt(2)
 ```
-4. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;\sqrt[3]{8}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} \sqrt[3]{8}}" />
+4. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;\sqrt[3]{8}}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} \sqrt[3]{8}}" /> 
 ```R
 8^(1/3)
 ```
-5. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{White}&space;log_2(8)}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{White} log_2(8)}" />
+5. <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{120}{\color{Emerald}&space;log_2(8)}" title="https://latex.codecogs.com/png.image?\inline \large \dpi{120}{\color{Emerald} log_2(8)}" /> 
 ```R
 log2(8)
 ```
