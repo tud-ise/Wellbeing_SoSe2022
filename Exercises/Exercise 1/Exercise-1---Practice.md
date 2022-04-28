@@ -126,6 +126,10 @@ starwars %>%
    na.omit()
 ```
 
+#### Further Star Wars Tasks
+
+If you find time during the week, you can solve the following tasks. We will start the next exercise by discussing your solutions. 
+
 ##### Tasks
 1. Find all characters with yellow eyes.
 
