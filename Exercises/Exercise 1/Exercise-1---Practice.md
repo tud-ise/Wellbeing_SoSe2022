@@ -74,14 +74,54 @@ View(starwars)
 
 1. Who is the tallest character? (Hint: You may want to use the `desc()` function)
 
-3. Find all droids.
+```R
+starwars %>%
+   arrange(desc(height))
+```
 
-4. How many droids are there? (Hint: You may want to use the `filter()` and `summarise()` functions)
+2. Find all droids.
 
-5. What is the home world of Han Solo? (Hint: You may want to use the `select()` and `filter()` functions)
+```R
+starwars %>%
+   filter(species == 'Droid')
+```
 
-6. How many characters are there per species? Sort by ascending count. (Hint: You may want to use the `group_by()`, `summarise()` and `arrange()` functions)
+3. How many droids are there?
 
-7. Change the height from `cm` to `m`. (Hint: You may want to use the `mutate()` function)
+```R
+starwars %>%
+   filter(species == 'Droid') %>%
+   summarise(n())
+```
 
-8. Filter out all characters that have missing values (`NA`) for their mass. How many are left? (Hint: You may want to use the `select()` and `na.omit()` function)
+4. What is the home world of Han Solo?
+
+```R
+starwars %>%
+   select(name, homeworld) %>%
+   filter(name == 'Han Solo')
+```
+
+5. How many characters are there per species? Sort by ascending count.
+
+```R
+starwars %>%
+    group_by(species) %>%
+    summarise(count = n()) %>%
+    arrange(desc(count))
+```
+
+6. Change the height from `cm` to `m`.
+
+```R
+starwars %>%
+   mutate(height = height / 100)
+```
+
+7. Filter out all characters that have missing values (`NA`) for their mass. How many are left?
+
+```R
+starwars %>%
+   select(name, mass) %>%
+   na.omit()
+```
