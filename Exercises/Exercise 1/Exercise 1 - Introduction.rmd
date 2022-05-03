@@ -4,6 +4,8 @@ output: github_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+library(ggplot2)
 ```
 
 # Exercise Number 1: Introduction to R
@@ -40,7 +42,7 @@ In the upper right corner, besides the History, which lists all the commands you
 ### Arithmetic Operators
 
 | Command   | Meaning                                   | Example (if appropriate) |
-|-----------|-------------------------------------------|--------------------------|
+|------------------|----------------------------------|---------------------|
 | \+        | Addition                                  |                          |
 | \-        | Subtraction                               |                          |
 | \*        | Multiplication                            |                          |
@@ -82,7 +84,7 @@ help(seq)
 ### Numerical Functions
 
 | Command              | Meaning              | Example (if appropriate)         |
-|----------------------|----------------------|----------------------------------|
+|---------------------|---------------------|------------------------------|
 | abs(x)               | Absolute Value       |                                  |
 | sqrt(x)              | Square root          |                                  |
 | ceiling(x)           | Round Up             | ceiling(4.687) is 5              |
@@ -98,7 +100,7 @@ help(seq)
 These functions all have the argument `na.rm`, which by default takes the value `FALSE`. This allows missing values to be taken into account, i.e. missing values (na = not available) are not removed in this case (rm = remove). These functions can all be applied to a vector (see below).
 
 | Command                | Meaning                                           |
-|------------------------|---------------------------------------------------|
+|------------------------|-----------------------------------------------|
 | mean(x, na.rm = FALSE) | Mean Value                                        |
 | sd(x)                  | Standard Deviation                                |
 | var(x)                 | Variance                                          |
@@ -448,7 +450,7 @@ install.packages("tidyverse")
 
 After that we can load the packages like this:
 
-```{r eval=FALSE, include=TRUE}
+```{r eval=TRUE, include=TRUE}
 library(tidyverse)
 ```
 
