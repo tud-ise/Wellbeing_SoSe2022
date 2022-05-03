@@ -1,0 +1,243 @@
+"id","name","height","mass","hair_color","skin_color","eye_color","birth_year","sex","gender","homeworld","species","films","vehicles","starships"
+"1","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","The Empire Strikes Back","Snowspeeder","X-wing"
+"2","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","The Empire Strikes Back","Snowspeeder","Imperial shuttle"
+"3","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","The Empire Strikes Back","Imperial Speeder Bike","X-wing"
+"4","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","The Empire Strikes Back","Imperial Speeder Bike","Imperial shuttle"
+"5","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","Revenge of the Sith","Snowspeeder","X-wing"
+"6","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","Revenge of the Sith","Snowspeeder","Imperial shuttle"
+"7","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","Revenge of the Sith","Imperial Speeder Bike","X-wing"
+"8","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","Revenge of the Sith","Imperial Speeder Bike","Imperial shuttle"
+"9","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","Return of the Jedi","Snowspeeder","X-wing"
+"10","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","Return of the Jedi","Snowspeeder","Imperial shuttle"
+"11","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","Return of the Jedi","Imperial Speeder Bike","X-wing"
+"12","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","Return of the Jedi","Imperial Speeder Bike","Imperial shuttle"
+"13","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","A New Hope","Snowspeeder","X-wing"
+"14","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","A New Hope","Snowspeeder","Imperial shuttle"
+"15","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","A New Hope","Imperial Speeder Bike","X-wing"
+"16","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","A New Hope","Imperial Speeder Bike","Imperial shuttle"
+"17","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","The Force Awakens","Snowspeeder","X-wing"
+"18","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","The Force Awakens","Snowspeeder","Imperial shuttle"
+"19","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","The Force Awakens","Imperial Speeder Bike","X-wing"
+"20","Luke Skywalker",172,77,"blond","fair","blue",19,"male","masculine","Tatooine","Human","The Force Awakens","Imperial Speeder Bike","Imperial shuttle"
+"21","C-3PO",167,75,NA,"gold","yellow",112,"none","masculine","Tatooine","Droid","The Empire Strikes Back",NA,NA
+"22","C-3PO",167,75,NA,"gold","yellow",112,"none","masculine","Tatooine","Droid","Attack of the Clones",NA,NA
+"23","C-3PO",167,75,NA,"gold","yellow",112,"none","masculine","Tatooine","Droid","The Phantom Menace",NA,NA
+"24","C-3PO",167,75,NA,"gold","yellow",112,"none","masculine","Tatooine","Droid","Revenge of the Sith",NA,NA
+"25","C-3PO",167,75,NA,"gold","yellow",112,"none","masculine","Tatooine","Droid","Return of the Jedi",NA,NA
+"26","C-3PO",167,75,NA,"gold","yellow",112,"none","masculine","Tatooine","Droid","A New Hope",NA,NA
+"27","R2-D2",96,32,NA,"white, blue","red",33,"none","masculine","Naboo","Droid","The Empire Strikes Back",NA,NA
+"28","R2-D2",96,32,NA,"white, blue","red",33,"none","masculine","Naboo","Droid","Attack of the Clones",NA,NA
+"29","R2-D2",96,32,NA,"white, blue","red",33,"none","masculine","Naboo","Droid","The Phantom Menace",NA,NA
+"30","R2-D2",96,32,NA,"white, blue","red",33,"none","masculine","Naboo","Droid","Revenge of the Sith",NA,NA
+"31","R2-D2",96,32,NA,"white, blue","red",33,"none","masculine","Naboo","Droid","Return of the Jedi",NA,NA
+"32","R2-D2",96,32,NA,"white, blue","red",33,"none","masculine","Naboo","Droid","A New Hope",NA,NA
+"33","R2-D2",96,32,NA,"white, blue","red",33,"none","masculine","Naboo","Droid","The Force Awakens",NA,NA
+"34","Darth Vader",202,136,"none","white","yellow",41.9,"male","masculine","Tatooine","Human","The Empire Strikes Back",NA,"TIE Advanced x1"
+"35","Darth Vader",202,136,"none","white","yellow",41.9,"male","masculine","Tatooine","Human","Revenge of the Sith",NA,"TIE Advanced x1"
+"36","Darth Vader",202,136,"none","white","yellow",41.9,"male","masculine","Tatooine","Human","Return of the Jedi",NA,"TIE Advanced x1"
+"37","Darth Vader",202,136,"none","white","yellow",41.9,"male","masculine","Tatooine","Human","A New Hope",NA,"TIE Advanced x1"
+"38","Leia Organa",150,49,"brown","light","brown",19,"female","feminine","Alderaan","Human","The Empire Strikes Back","Imperial Speeder Bike",NA
+"39","Leia Organa",150,49,"brown","light","brown",19,"female","feminine","Alderaan","Human","Revenge of the Sith","Imperial Speeder Bike",NA
+"40","Leia Organa",150,49,"brown","light","brown",19,"female","feminine","Alderaan","Human","Return of the Jedi","Imperial Speeder Bike",NA
+"41","Leia Organa",150,49,"brown","light","brown",19,"female","feminine","Alderaan","Human","A New Hope","Imperial Speeder Bike",NA
+"42","Leia Organa",150,49,"brown","light","brown",19,"female","feminine","Alderaan","Human","The Force Awakens","Imperial Speeder Bike",NA
+"43","Owen Lars",178,120,"brown, grey","light","blue",52,"male","masculine","Tatooine","Human","Attack of the Clones",NA,NA
+"44","Owen Lars",178,120,"brown, grey","light","blue",52,"male","masculine","Tatooine","Human","Revenge of the Sith",NA,NA
+"45","Owen Lars",178,120,"brown, grey","light","blue",52,"male","masculine","Tatooine","Human","A New Hope",NA,NA
+"46","Beru Whitesun lars",165,75,"brown","light","blue",47,"female","feminine","Tatooine","Human","Attack of the Clones",NA,NA
+"47","Beru Whitesun lars",165,75,"brown","light","blue",47,"female","feminine","Tatooine","Human","Revenge of the Sith",NA,NA
+"48","Beru Whitesun lars",165,75,"brown","light","blue",47,"female","feminine","Tatooine","Human","A New Hope",NA,NA
+"49","R5-D4",97,32,NA,"white, red","red",NA,"none","masculine","Tatooine","Droid","A New Hope",NA,NA
+"50","Biggs Darklighter",183,84,"black","light","brown",24,"male","masculine","Tatooine","Human","A New Hope",NA,"X-wing"
+"51","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","The Empire Strikes Back","Tribubble bongo","Jedi starfighter"
+"52","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","The Empire Strikes Back","Tribubble bongo","Trade Federation cruiser"
+"53","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","The Empire Strikes Back","Tribubble bongo","Naboo star skiff"
+"54","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","The Empire Strikes Back","Tribubble bongo","Jedi Interceptor"
+"55","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","The Empire Strikes Back","Tribubble bongo","Belbullab-22 starfighter"
+"56","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Attack of the Clones","Tribubble bongo","Jedi starfighter"
+"57","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Attack of the Clones","Tribubble bongo","Trade Federation cruiser"
+"58","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Attack of the Clones","Tribubble bongo","Naboo star skiff"
+"59","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Attack of the Clones","Tribubble bongo","Jedi Interceptor"
+"60","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Attack of the Clones","Tribubble bongo","Belbullab-22 starfighter"
+"61","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","The Phantom Menace","Tribubble bongo","Jedi starfighter"
+"62","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","The Phantom Menace","Tribubble bongo","Trade Federation cruiser"
+"63","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","The Phantom Menace","Tribubble bongo","Naboo star skiff"
+"64","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","The Phantom Menace","Tribubble bongo","Jedi Interceptor"
+"65","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","The Phantom Menace","Tribubble bongo","Belbullab-22 starfighter"
+"66","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Revenge of the Sith","Tribubble bongo","Jedi starfighter"
+"67","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Revenge of the Sith","Tribubble bongo","Trade Federation cruiser"
+"68","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Revenge of the Sith","Tribubble bongo","Naboo star skiff"
+"69","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Revenge of the Sith","Tribubble bongo","Jedi Interceptor"
+"70","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Revenge of the Sith","Tribubble bongo","Belbullab-22 starfighter"
+"71","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Return of the Jedi","Tribubble bongo","Jedi starfighter"
+"72","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Return of the Jedi","Tribubble bongo","Trade Federation cruiser"
+"73","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Return of the Jedi","Tribubble bongo","Naboo star skiff"
+"74","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Return of the Jedi","Tribubble bongo","Jedi Interceptor"
+"75","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","Return of the Jedi","Tribubble bongo","Belbullab-22 starfighter"
+"76","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","A New Hope","Tribubble bongo","Jedi starfighter"
+"77","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","A New Hope","Tribubble bongo","Trade Federation cruiser"
+"78","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","A New Hope","Tribubble bongo","Naboo star skiff"
+"79","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","A New Hope","Tribubble bongo","Jedi Interceptor"
+"80","Obi-Wan Kenobi",182,77,"auburn, white","fair","blue-gray",57,"male","masculine","Stewjon","Human","A New Hope","Tribubble bongo","Belbullab-22 starfighter"
+"81","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","Attack of the Clones","Zephyr-G swoop bike","Trade Federation cruiser"
+"82","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","Attack of the Clones","Zephyr-G swoop bike","Jedi Interceptor"
+"83","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","Attack of the Clones","Zephyr-G swoop bike","Naboo fighter"
+"84","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","Attack of the Clones","XJ-6 airspeeder","Trade Federation cruiser"
+"85","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","Attack of the Clones","XJ-6 airspeeder","Jedi Interceptor"
+"86","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","Attack of the Clones","XJ-6 airspeeder","Naboo fighter"
+"87","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","The Phantom Menace","Zephyr-G swoop bike","Trade Federation cruiser"
+"88","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","The Phantom Menace","Zephyr-G swoop bike","Jedi Interceptor"
+"89","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","The Phantom Menace","Zephyr-G swoop bike","Naboo fighter"
+"90","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","The Phantom Menace","XJ-6 airspeeder","Trade Federation cruiser"
+"91","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","The Phantom Menace","XJ-6 airspeeder","Jedi Interceptor"
+"92","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","The Phantom Menace","XJ-6 airspeeder","Naboo fighter"
+"93","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","Revenge of the Sith","Zephyr-G swoop bike","Trade Federation cruiser"
+"94","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","Revenge of the Sith","Zephyr-G swoop bike","Jedi Interceptor"
+"95","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","Revenge of the Sith","Zephyr-G swoop bike","Naboo fighter"
+"96","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","Revenge of the Sith","XJ-6 airspeeder","Trade Federation cruiser"
+"97","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","Revenge of the Sith","XJ-6 airspeeder","Jedi Interceptor"
+"98","Anakin Skywalker",188,84,"blond","fair","blue",41.9,"male","masculine","Tatooine","Human","Revenge of the Sith","XJ-6 airspeeder","Naboo fighter"
+"99","Wilhuff Tarkin",180,NA,"auburn, grey","fair","blue",64,"male","masculine","Eriadu","Human","Revenge of the Sith",NA,NA
+"100","Wilhuff Tarkin",180,NA,"auburn, grey","fair","blue",64,"male","masculine","Eriadu","Human","A New Hope",NA,NA
+"101","Chewbacca",228,112,"brown","unknown","blue",200,"male","masculine","Kashyyyk","Wookiee","The Empire Strikes Back","AT-ST","Millennium Falcon"
+"102","Chewbacca",228,112,"brown","unknown","blue",200,"male","masculine","Kashyyyk","Wookiee","The Empire Strikes Back","AT-ST","Imperial shuttle"
+"103","Chewbacca",228,112,"brown","unknown","blue",200,"male","masculine","Kashyyyk","Wookiee","Revenge of the Sith","AT-ST","Millennium Falcon"
+"104","Chewbacca",228,112,"brown","unknown","blue",200,"male","masculine","Kashyyyk","Wookiee","Revenge of the Sith","AT-ST","Imperial shuttle"
+"105","Chewbacca",228,112,"brown","unknown","blue",200,"male","masculine","Kashyyyk","Wookiee","Return of the Jedi","AT-ST","Millennium Falcon"
+"106","Chewbacca",228,112,"brown","unknown","blue",200,"male","masculine","Kashyyyk","Wookiee","Return of the Jedi","AT-ST","Imperial shuttle"
+"107","Chewbacca",228,112,"brown","unknown","blue",200,"male","masculine","Kashyyyk","Wookiee","A New Hope","AT-ST","Millennium Falcon"
+"108","Chewbacca",228,112,"brown","unknown","blue",200,"male","masculine","Kashyyyk","Wookiee","A New Hope","AT-ST","Imperial shuttle"
+"109","Chewbacca",228,112,"brown","unknown","blue",200,"male","masculine","Kashyyyk","Wookiee","The Force Awakens","AT-ST","Millennium Falcon"
+"110","Chewbacca",228,112,"brown","unknown","blue",200,"male","masculine","Kashyyyk","Wookiee","The Force Awakens","AT-ST","Imperial shuttle"
+"111","Han Solo",180,80,"brown","fair","brown",29,"male","masculine","Corellia","Human","The Empire Strikes Back",NA,"Millennium Falcon"
+"112","Han Solo",180,80,"brown","fair","brown",29,"male","masculine","Corellia","Human","The Empire Strikes Back",NA,"Imperial shuttle"
+"113","Han Solo",180,80,"brown","fair","brown",29,"male","masculine","Corellia","Human","Return of the Jedi",NA,"Millennium Falcon"
+"114","Han Solo",180,80,"brown","fair","brown",29,"male","masculine","Corellia","Human","Return of the Jedi",NA,"Imperial shuttle"
+"115","Han Solo",180,80,"brown","fair","brown",29,"male","masculine","Corellia","Human","A New Hope",NA,"Millennium Falcon"
+"116","Han Solo",180,80,"brown","fair","brown",29,"male","masculine","Corellia","Human","A New Hope",NA,"Imperial shuttle"
+"117","Han Solo",180,80,"brown","fair","brown",29,"male","masculine","Corellia","Human","The Force Awakens",NA,"Millennium Falcon"
+"118","Han Solo",180,80,"brown","fair","brown",29,"male","masculine","Corellia","Human","The Force Awakens",NA,"Imperial shuttle"
+"119","Greedo",173,74,NA,"green","black",44,"male","masculine","Rodia","Rodian","A New Hope",NA,NA
+"120","Jabba Desilijic Tiure",175,1358,NA,"green-tan, brown","orange",600,"hermaphroditic","masculine","Nal Hutta","Hutt","The Phantom Menace",NA,NA
+"121","Jabba Desilijic Tiure",175,1358,NA,"green-tan, brown","orange",600,"hermaphroditic","masculine","Nal Hutta","Hutt","Return of the Jedi",NA,NA
+"122","Jabba Desilijic Tiure",175,1358,NA,"green-tan, brown","orange",600,"hermaphroditic","masculine","Nal Hutta","Hutt","A New Hope",NA,NA
+"123","Wedge Antilles",170,77,"brown","fair","hazel",21,"male","masculine","Corellia","Human","The Empire Strikes Back","Snowspeeder","X-wing"
+"124","Wedge Antilles",170,77,"brown","fair","hazel",21,"male","masculine","Corellia","Human","Return of the Jedi","Snowspeeder","X-wing"
+"125","Wedge Antilles",170,77,"brown","fair","hazel",21,"male","masculine","Corellia","Human","A New Hope","Snowspeeder","X-wing"
+"126","Jek Tono Porkins",180,110,"brown","fair","blue",NA,"male","masculine","Bestine IV","Human","A New Hope",NA,"X-wing"
+"127","Yoda",66,17,"white","green","brown",896,"male","masculine",NA,"Yoda's species","The Empire Strikes Back",NA,NA
+"128","Yoda",66,17,"white","green","brown",896,"male","masculine",NA,"Yoda's species","Attack of the Clones",NA,NA
+"129","Yoda",66,17,"white","green","brown",896,"male","masculine",NA,"Yoda's species","The Phantom Menace",NA,NA
+"130","Yoda",66,17,"white","green","brown",896,"male","masculine",NA,"Yoda's species","Revenge of the Sith",NA,NA
+"131","Yoda",66,17,"white","green","brown",896,"male","masculine",NA,"Yoda's species","Return of the Jedi",NA,NA
+"132","Palpatine",170,75,"grey","pale","yellow",82,"male","masculine","Naboo","Human","The Empire Strikes Back",NA,NA
+"133","Palpatine",170,75,"grey","pale","yellow",82,"male","masculine","Naboo","Human","Attack of the Clones",NA,NA
+"134","Palpatine",170,75,"grey","pale","yellow",82,"male","masculine","Naboo","Human","The Phantom Menace",NA,NA
+"135","Palpatine",170,75,"grey","pale","yellow",82,"male","masculine","Naboo","Human","Revenge of the Sith",NA,NA
+"136","Palpatine",170,75,"grey","pale","yellow",82,"male","masculine","Naboo","Human","Return of the Jedi",NA,NA
+"137","Boba Fett",183,78.2,"black","fair","brown",31.5,"male","masculine","Kamino","Human","The Empire Strikes Back",NA,"Slave 1"
+"138","Boba Fett",183,78.2,"black","fair","brown",31.5,"male","masculine","Kamino","Human","Attack of the Clones",NA,"Slave 1"
+"139","Boba Fett",183,78.2,"black","fair","brown",31.5,"male","masculine","Kamino","Human","Return of the Jedi",NA,"Slave 1"
+"140","IG-88",200,140,"none","metal","red",15,"none","masculine",NA,"Droid","The Empire Strikes Back",NA,NA
+"141","Bossk",190,113,"none","green","red",53,"male","masculine","Trandosha","Trandoshan","The Empire Strikes Back",NA,NA
+"142","Lando Calrissian",177,79,"black","dark","brown",31,"male","masculine","Socorro","Human","The Empire Strikes Back",NA,"Millennium Falcon"
+"143","Lando Calrissian",177,79,"black","dark","brown",31,"male","masculine","Socorro","Human","Return of the Jedi",NA,"Millennium Falcon"
+"144","Lobot",175,79,"none","light","blue",37,"male","masculine","Bespin","Human","The Empire Strikes Back",NA,NA
+"145","Ackbar",180,83,"none","brown mottle","orange",41,"male","masculine","Mon Cala","Mon Calamari","Return of the Jedi",NA,NA
+"146","Ackbar",180,83,"none","brown mottle","orange",41,"male","masculine","Mon Cala","Mon Calamari","The Force Awakens",NA,NA
+"147","Mon Mothma",150,NA,"auburn","fair","blue",48,"female","feminine","Chandrila","Human","Return of the Jedi",NA,NA
+"148","Arvel Crynyd",NA,NA,"brown","fair","brown",NA,"male","masculine",NA,"Human","Return of the Jedi",NA,"A-wing"
+"149","Wicket Systri Warrick",88,20,"brown","brown","brown",8,"male","masculine","Endor","Ewok","Return of the Jedi",NA,NA
+"150","Nien Nunb",160,68,"none","grey","black",NA,"male","masculine","Sullust","Sullustan","Return of the Jedi",NA,"Millennium Falcon"
+"151","Qui-Gon Jinn",193,89,"brown","fair","blue",92,"male","masculine",NA,"Human","The Phantom Menace","Tribubble bongo",NA
+"152","Nute Gunray",191,90,"none","mottled green","red",NA,"male","masculine","Cato Neimoidia","Neimodian","Attack of the Clones",NA,NA
+"153","Nute Gunray",191,90,"none","mottled green","red",NA,"male","masculine","Cato Neimoidia","Neimodian","The Phantom Menace",NA,NA
+"154","Nute Gunray",191,90,"none","mottled green","red",NA,"male","masculine","Cato Neimoidia","Neimodian","Revenge of the Sith",NA,NA
+"155","Finis Valorum",170,NA,"blond","fair","blue",91,"male","masculine","Coruscant","Human","The Phantom Menace",NA,NA
+"156","Jar Jar Binks",196,66,"none","orange","orange",52,"male","masculine","Naboo","Gungan","Attack of the Clones",NA,NA
+"157","Jar Jar Binks",196,66,"none","orange","orange",52,"male","masculine","Naboo","Gungan","The Phantom Menace",NA,NA
+"158","Roos Tarpals",224,82,"none","grey","orange",NA,"male","masculine","Naboo","Gungan","The Phantom Menace",NA,NA
+"159","Rugor Nass",206,NA,"none","green","orange",NA,"male","masculine","Naboo","Gungan","The Phantom Menace",NA,NA
+"160","Ric Olié",183,NA,"brown","fair","blue",NA,NA,NA,"Naboo",NA,"The Phantom Menace",NA,"Naboo Royal Starship"
+"161","Watto",137,NA,"black","blue, grey","yellow",NA,"male","masculine","Toydaria","Toydarian","Attack of the Clones",NA,NA
+"162","Watto",137,NA,"black","blue, grey","yellow",NA,"male","masculine","Toydaria","Toydarian","The Phantom Menace",NA,NA
+"163","Sebulba",112,40,"none","grey, red","orange",NA,"male","masculine","Malastare","Dug","The Phantom Menace",NA,NA
+"164","Quarsh Panaka",183,NA,"black","dark","brown",62,NA,NA,"Naboo",NA,"The Phantom Menace",NA,NA
+"165","Shmi Skywalker",163,NA,"black","fair","brown",72,"female","feminine","Tatooine","Human","Attack of the Clones",NA,NA
+"166","Shmi Skywalker",163,NA,"black","fair","brown",72,"female","feminine","Tatooine","Human","The Phantom Menace",NA,NA
+"167","Darth Maul",175,80,"none","red","yellow",54,"male","masculine","Dathomir","Zabrak","The Phantom Menace","Sith speeder","Scimitar"
+"168","Bib Fortuna",180,NA,"none","pale","pink",NA,"male","masculine","Ryloth","Twi'lek","Return of the Jedi",NA,NA
+"169","Ayla Secura",178,55,"none","blue","hazel",48,"female","feminine","Ryloth","Twi'lek","Attack of the Clones",NA,NA
+"170","Ayla Secura",178,55,"none","blue","hazel",48,"female","feminine","Ryloth","Twi'lek","The Phantom Menace",NA,NA
+"171","Ayla Secura",178,55,"none","blue","hazel",48,"female","feminine","Ryloth","Twi'lek","Revenge of the Sith",NA,NA
+"172","Dud Bolt",94,45,"none","blue, grey","yellow",NA,"male","masculine","Vulpter","Vulptereen","The Phantom Menace",NA,NA
+"173","Gasgano",122,NA,"none","white, blue","black",NA,"male","masculine","Troiken","Xexto","The Phantom Menace",NA,NA
+"174","Ben Quadinaros",163,65,"none","grey, green, yellow","orange",NA,"male","masculine","Tund","Toong","The Phantom Menace",NA,NA
+"175","Mace Windu",188,84,"none","dark","brown",72,"male","masculine","Haruun Kal","Human","Attack of the Clones",NA,NA
+"176","Mace Windu",188,84,"none","dark","brown",72,"male","masculine","Haruun Kal","Human","The Phantom Menace",NA,NA
+"177","Mace Windu",188,84,"none","dark","brown",72,"male","masculine","Haruun Kal","Human","Revenge of the Sith",NA,NA
+"178","Ki-Adi-Mundi",198,82,"white","pale","yellow",92,"male","masculine","Cerea","Cerean","Attack of the Clones",NA,NA
+"179","Ki-Adi-Mundi",198,82,"white","pale","yellow",92,"male","masculine","Cerea","Cerean","The Phantom Menace",NA,NA
+"180","Ki-Adi-Mundi",198,82,"white","pale","yellow",92,"male","masculine","Cerea","Cerean","Revenge of the Sith",NA,NA
+"181","Kit Fisto",196,87,"none","green","black",NA,"male","masculine","Glee Anselm","Nautolan","Attack of the Clones",NA,NA
+"182","Kit Fisto",196,87,"none","green","black",NA,"male","masculine","Glee Anselm","Nautolan","The Phantom Menace",NA,NA
+"183","Kit Fisto",196,87,"none","green","black",NA,"male","masculine","Glee Anselm","Nautolan","Revenge of the Sith",NA,NA
+"184","Eeth Koth",171,NA,"black","brown","brown",NA,"male","masculine","Iridonia","Zabrak","The Phantom Menace",NA,NA
+"185","Eeth Koth",171,NA,"black","brown","brown",NA,"male","masculine","Iridonia","Zabrak","Revenge of the Sith",NA,NA
+"186","Adi Gallia",184,50,"none","dark","blue",NA,"female","feminine","Coruscant","Tholothian","The Phantom Menace",NA,NA
+"187","Adi Gallia",184,50,"none","dark","blue",NA,"female","feminine","Coruscant","Tholothian","Revenge of the Sith",NA,NA
+"188","Saesee Tiin",188,NA,"none","pale","orange",NA,"male","masculine","Iktotch","Iktotchi","The Phantom Menace",NA,NA
+"189","Saesee Tiin",188,NA,"none","pale","orange",NA,"male","masculine","Iktotch","Iktotchi","Revenge of the Sith",NA,NA
+"190","Yarael Poof",264,NA,"none","white","yellow",NA,"male","masculine","Quermia","Quermian","The Phantom Menace",NA,NA
+"191","Plo Koon",188,80,"none","orange","black",22,"male","masculine","Dorin","Kel Dor","Attack of the Clones",NA,"Jedi starfighter"
+"192","Plo Koon",188,80,"none","orange","black",22,"male","masculine","Dorin","Kel Dor","The Phantom Menace",NA,"Jedi starfighter"
+"193","Plo Koon",188,80,"none","orange","black",22,"male","masculine","Dorin","Kel Dor","Revenge of the Sith",NA,"Jedi starfighter"
+"194","Mas Amedda",196,NA,"none","blue","blue",NA,"male","masculine","Champala","Chagrian","Attack of the Clones",NA,NA
+"195","Mas Amedda",196,NA,"none","blue","blue",NA,"male","masculine","Champala","Chagrian","The Phantom Menace",NA,NA
+"196","Gregar Typho",185,85,"black","dark","brown",NA,"male","masculine","Naboo","Human","Attack of the Clones",NA,"Naboo fighter"
+"197","Cordé",157,NA,"brown","light","brown",NA,"female","feminine","Naboo","Human","Attack of the Clones",NA,NA
+"198","Cliegg Lars",183,NA,"brown","fair","blue",82,"male","masculine","Tatooine","Human","Attack of the Clones",NA,NA
+"199","Poggle the Lesser",183,80,"none","green","yellow",NA,"male","masculine","Geonosis","Geonosian","Attack of the Clones",NA,NA
+"200","Poggle the Lesser",183,80,"none","green","yellow",NA,"male","masculine","Geonosis","Geonosian","Revenge of the Sith",NA,NA
+"201","Luminara Unduli",170,56.2,"black","yellow","blue",58,"female","feminine","Mirial","Mirialan","Attack of the Clones",NA,NA
+"202","Luminara Unduli",170,56.2,"black","yellow","blue",58,"female","feminine","Mirial","Mirialan","Revenge of the Sith",NA,NA
+"203","Barriss Offee",166,50,"black","yellow","blue",40,"female","feminine","Mirial","Mirialan","Attack of the Clones",NA,NA
+"204","Dormé",165,NA,"brown","light","brown",NA,"female","feminine","Naboo","Human","Attack of the Clones",NA,NA
+"205","Dooku",193,80,"white","fair","brown",102,"male","masculine","Serenno","Human","Attack of the Clones","Flitknot speeder",NA
+"206","Dooku",193,80,"white","fair","brown",102,"male","masculine","Serenno","Human","Revenge of the Sith","Flitknot speeder",NA
+"207","Bail Prestor Organa",191,NA,"black","tan","brown",67,"male","masculine","Alderaan","Human","Attack of the Clones",NA,NA
+"208","Bail Prestor Organa",191,NA,"black","tan","brown",67,"male","masculine","Alderaan","Human","Revenge of the Sith",NA,NA
+"209","Jango Fett",183,79,"black","tan","brown",66,"male","masculine","Concord Dawn","Human","Attack of the Clones",NA,NA
+"210","Zam Wesell",168,55,"blonde","fair, green, yellow","yellow",NA,"female","feminine","Zolan","Clawdite","Attack of the Clones","Koro-2 Exodrive airspeeder",NA
+"211","Dexter Jettster",198,102,"none","brown","yellow",NA,"male","masculine","Ojom","Besalisk","Attack of the Clones",NA,NA
+"212","Lama Su",229,88,"none","grey","black",NA,"male","masculine","Kamino","Kaminoan","Attack of the Clones",NA,NA
+"213","Taun We",213,NA,"none","grey","black",NA,"female","feminine","Kamino","Kaminoan","Attack of the Clones",NA,NA
+"214","Jocasta Nu",167,NA,"white","fair","blue",NA,"female","feminine","Coruscant","Human","Attack of the Clones",NA,NA
+"215","Ratts Tyerell",79,15,"none","grey, blue","unknown",NA,"male","masculine","Aleen Minor","Aleena","The Phantom Menace",NA,NA
+"216","R4-P17",96,NA,"none","silver, red","red, blue",NA,"none","feminine",NA,"Droid","Attack of the Clones",NA,NA
+"217","R4-P17",96,NA,"none","silver, red","red, blue",NA,"none","feminine",NA,"Droid","Revenge of the Sith",NA,NA
+"218","Wat Tambor",193,48,"none","green, grey","unknown",NA,"male","masculine","Skako","Skakoan","Attack of the Clones",NA,NA
+"219","San Hill",191,NA,"none","grey","gold",NA,"male","masculine","Muunilinst","Muun","Attack of the Clones",NA,NA
+"220","Shaak Ti",178,57,"none","red, blue, white","black",NA,"female","feminine","Shili","Togruta","Attack of the Clones",NA,NA
+"221","Shaak Ti",178,57,"none","red, blue, white","black",NA,"female","feminine","Shili","Togruta","Revenge of the Sith",NA,NA
+"222","Grievous",216,159,"none","brown, white","green, yellow",NA,"male","masculine","Kalee","Kaleesh","Revenge of the Sith","Tsmeu-6 personal wheel bike","Belbullab-22 starfighter"
+"223","Tarfful",234,136,"brown","brown","blue",NA,"male","masculine","Kashyyyk","Wookiee","Revenge of the Sith",NA,NA
+"224","Raymus Antilles",188,79,"brown","light","brown",NA,"male","masculine","Alderaan","Human","Revenge of the Sith",NA,NA
+"225","Raymus Antilles",188,79,"brown","light","brown",NA,"male","masculine","Alderaan","Human","A New Hope",NA,NA
+"226","Sly Moore",178,48,"none","pale","white",NA,NA,NA,"Umbara",NA,"Attack of the Clones",NA,NA
+"227","Sly Moore",178,48,"none","pale","white",NA,NA,NA,"Umbara",NA,"Revenge of the Sith",NA,NA
+"228","Tion Medon",206,80,"none","grey","black",NA,"male","masculine","Utapau","Pau'an","Revenge of the Sith",NA,NA
+"229","Finn",NA,NA,"black","dark","dark",NA,"male","masculine",NA,"Human","The Force Awakens",NA,NA
+"230","Rey",NA,NA,"brown","light","hazel",NA,"female","feminine",NA,"Human","The Force Awakens",NA,NA
+"231","Poe Dameron",NA,NA,"brown","light","brown",NA,"male","masculine",NA,"Human","The Force Awakens",NA,"T-70 X-wing fighter"
+"232","BB8",NA,NA,"none","none","black",NA,"none","masculine",NA,"Droid","The Force Awakens",NA,NA
+"233","Captain Phasma",NA,NA,"unknown","unknown","unknown",NA,NA,NA,NA,NA,"The Force Awakens",NA,NA
+"234","Padmé Amidala",165,45,"brown","light","brown",46,"female","feminine","Naboo","Human","Attack of the Clones",NA,"H-type Nubian yacht"
+"235","Padmé Amidala",165,45,"brown","light","brown",46,"female","feminine","Naboo","Human","Attack of the Clones",NA,"Naboo star skiff"
+"236","Padmé Amidala",165,45,"brown","light","brown",46,"female","feminine","Naboo","Human","Attack of the Clones",NA,"Naboo fighter"
+"237","Padmé Amidala",165,45,"brown","light","brown",46,"female","feminine","Naboo","Human","The Phantom Menace",NA,"H-type Nubian yacht"
+"238","Padmé Amidala",165,45,"brown","light","brown",46,"female","feminine","Naboo","Human","The Phantom Menace",NA,"Naboo star skiff"
+"239","Padmé Amidala",165,45,"brown","light","brown",46,"female","feminine","Naboo","Human","The Phantom Menace",NA,"Naboo fighter"
+"240","Padmé Amidala",165,45,"brown","light","brown",46,"female","feminine","Naboo","Human","Revenge of the Sith",NA,"H-type Nubian yacht"
+"241","Padmé Amidala",165,45,"brown","light","brown",46,"female","feminine","Naboo","Human","Revenge of the Sith",NA,"Naboo star skiff"
+"242","Padmé Amidala",165,45,"brown","light","brown",46,"female","feminine","Naboo","Human","Revenge of the Sith",NA,"Naboo fighter"
