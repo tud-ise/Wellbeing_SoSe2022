@@ -1,4 +1,5 @@
 ---
+title: "Exercise 1 - Introduction to R"
 output: github_document
 ---
 
@@ -7,8 +8,6 @@ knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
 library(ggplot2)
 ```
-
-# Exercise Number 1: Introduction to R
 
 ## Christopher Diebel & Jan-Hendrik Schmidt - ISE Darmstadt
 
