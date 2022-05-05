@@ -133,11 +133,33 @@ If you find time during the week, you can solve the following tasks. We will sta
 ##### Tasks
 1. Find all characters with yellow eyes.
 
-
+```R
+> starwars %>%
++     select(name, eye_color) %>%
++     filter(eye_color == 'yellow')
+# A tibble: 11 x 2
+   name              eye_color
+   <chr>             <chr>
+ 1 C-3PO             yellow
+ 2 Darth Vader       yellow
+ 3 Palpatine         yellow
+ 4 Watto             yellow
+ 5 Darth Maul        yellow
+ 6 Dud Bolt          yellow
+ 7 Ki-Adi-Mundi      yellow
+ 8 Yarael Poof       yellow
+ 9 Poggle the Lesser yellow
+10 Zam Wesell        yellow
+11 Dexter Jettster   yellow
+```
 
 2. Remove all Gungans. How many characters are left?
 
-
+```R
+> starwars %>%
++     filter(is.na(species)|species != 'Gungan')
+# A tibble: 84 x 14
+```
 
 3. What is the average mass of all droids?
 
