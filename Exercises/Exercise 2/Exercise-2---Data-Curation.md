@@ -41,28 +41,120 @@ basis of this semester’s exercise.
 
 1\. Find all characters with yellow eyes.
 
+``` r
+> starwars %>%
++     select(name, eye_color) %>%
++     filter(eye_color == 'yellow')
+```
+
 2\. Remove all Gungans. How many characters are left?
+
+``` r
+> starwars %>%
++     filter(is.na(species)|species != 'Gungan')
+```
 
 3\. What is the average mass of all droids?
 
+``` r
+> starwars %>%
++     select(name, species, mass) %>%
++     filter(species == 'Droid') %>%
++     na.omit() %>%
++     summarise(mean(mass))
+```
+
 4\. Calculate the BMI for all humans (\`mass / ((height / 100) ^ 2)\`)
 
+``` r
+> starwars %>%
++     select(name, mass, height, species) %>%
++     filter(species == 'Human') %>%
++     filter(!is.na(mass)) %>%
++     filter(!is.na(height)) %>%
++     mutate(bmi = (mass / ((height / 100) ^ 2)))
+```
+
 5\. Which character has the longest name?
+
+``` r
+> starwars %>%
++     select(name) %>%
++     arrange(desc(str_length(name))) %>%
++     filter(row_number()==1)
+```
 
 6\. What is the earliest birth year for each species? (\`birth_year\` is
 measured in BBY = Before Battle of Yavin, so high values = earlier)
 
+``` r
+> starwars %>%
++     filter(!is.na(birth_year)) %>%
++     filter(!is.na(species)) %>%
++     group_by(species) %>%
++     arrange(birth_year) %>%
++     summarise(max(birth_year))
+```
+
 7\. What are the most populated planets?
+
+``` r
+> starwars %>%
++     group_by(homeworld) %>%
++     summarise(n = n()) %>%
++     arrange(desc(n))
+```
 
 8\. What is the average height of all female humans?
 
+``` r
+> starwars %>%
++     select(name, height, gender, species) %>%
++     filter(species == 'Human', gender == 'feminine') %>%
++     na.omit() %>%
++     summarise(mean(height))
+```
+
 9\. Which planet has the most droids?
+
+``` r
+> starwars %>%
++     filter(species == 'Droid') %>%
++     group_by(homeworld) %>%
++     summarise(n = n()) %>%
++     arrange(desc(n))
+```
 
 10\. Who is the oldest character of each species?
 
+``` r
+> starwars %>%
++     filter(!is.na(birth_year)) %>%
++     filter(!is.na(species)) %>%
++     group_by(species, name) %>%
++     summarise(by = max(birth_year)) %>%
++     group_by(species) %>%
++     slice(which.max(by))
+```
+
 11\. Which is the most prevalent eye color on each planet?
 
+``` r
+> starwars %>%
++       group_by(homeworld, eye_color) %>%
++       mutate(rank = row_number()) %>%
++       group_by(homeworld) %>%
++       slice(which.max(rank)) %>%
++       summarise(homeworld, eye_color, rank)
+```
+
 12\. How many unique eye colors are there?
+
+``` r
+> starwars %>%
++       summarise(eye_color) %>%
++       distinct(eye_color)
+```
 
 ## How to Import Data in R
 
@@ -246,9 +338,25 @@ friends_factorized <- friends %>%
     place it in the folder which is shown in the `Files` section of
     RStudio.
 
+The following code was used to generate the `starwars_dd.csv` file, in
+case you are curious (this is not part of this exercise).
+
+``` r
+> library(tidyverse)
+> starwars %>% 
++       unnest(cols=films,keep_empty=TRUE) %>% 
++       unnest(cols=vehicles, keep_empty=TRUE) %>% 
++       unnest(cols=starships, keep_empty=TRUE) %>%
++       write.csv('./starwars_dd.csv')
+```
+
 3.  Import `starwars_dd.csv` into a variable named `starwars_dd`. The
     contents are different from the tidyverse-internal `starwars`
     dataset and simplify the next steps for you.
+
+``` r
+> read_csv('./starwars_dd.csv') -> starwars_dd
+```
 
 4.  Import the `tidyfst` package. Then generate dummies for all films
     and store them in the variable `starwars_films_dd`. Inspect them in
@@ -260,9 +368,58 @@ friends_factorized <- friends %>%
     (Hint: Each character has multiple rows for each film, vehicle and
     starship)
 
+``` r
+> library(tidyfst)
+> starwars_dd %>% 
++       distinct(name, films, .keep_all=TRUE) %>% 
++       dummy_dt(films) ->
++       starwars_films_dd
+> starwars_films_dd <- as_tibble(starwars_films_dd)
+> View(starwars_films_dd)
+```
+
 5.  How many characters starred in `A New Hope`?
 
+``` r
+> starwars_films_dd %>% 
++       filter(`films_A New Hope` == 1) %>% 
++       summarise(name, `films_A New Hope`)
+# A tibble: 18 x 2
+name                  `films_A New Hope`
+<chr>                              <dbl>
+1 Beru Whitesun lars                     1
+2 Biggs Darklighter                      1
+3 C-3PO                                  1
+4 Chewbacca                              1
+5 Darth Vader                            1
+6 Greedo                                 1
+7 Han Solo                               1
+8 Jabba Desilijic Tiure                  1
+9 Jek Tono Porkins                       1
+10 Leia Organa                            1
+11 Luke Skywalker                         1
+12 Obi-Wan Kenobi                         1
+13 Owen Lars                              1
+14 R2-D2                                  1
+15 R5-D4                                  1
+16 Raymus Antilles                        1
+17 Wedge Antilles                         1
+18 Wilhuff Tarkin                         1 
+```
+
 6.  Which of those characters are female?
+
+``` r
+> starwars_films_dd %>% 
++       filter(`films_A New Hope` == 1) %>% 
++       filter(sex == 'female') %>% 
++       summarise(name, `films_A New Hope`)
+# A tibble: 2 x 2
+  name               `films_A New Hope`
+  <chr>                           <dbl>
+1 Beru Whitesun lars                  1
+2 Leia Organa                         1
+```
 
 ## Group Session: Working with Dates
 
@@ -313,4 +470,4 @@ elapsed <- start %--% end
 as.duration(elapsed)
 ```
 
-    ## [1] "3.22559499740601s"
+    ## [1] "3.20936703681946s"
