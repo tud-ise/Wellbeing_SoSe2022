@@ -57,7 +57,7 @@ each characteristic using each item.
 
 *Technostress*
 
-    df$TS_CTRL = (df$esm_technostress_control_1 + dfesm_technostress_control_2)/2
+    df$TS_CTRL = (df$esm_technostress_control_1 + df$esm_technostress_control_2)/2
 
     df$TS_NEG = (df$esm_technostress_negative_1 + df$esm_technostress_negative_2 
              + df$esm_technostress_negative_3 + df$esm_technostress_negative_4 + df$esm_technostress_negative_5)/5
