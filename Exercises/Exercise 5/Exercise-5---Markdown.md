@@ -50,12 +50,12 @@ repository](https://github.com/tud-ise/Wellbeing_SoSe2022/blob/main/Exercises/Ex
 **Open the data set**
 
     data = read.csv("**Your Path** /wellbing_test_data.csv")
-    df = data
+    df_input = data
 
 **Check the data structure**
 
-    summary(df)
-    str(df)
+    summary(df_input)
+    str(df_input)
 
 **Format data**
 
